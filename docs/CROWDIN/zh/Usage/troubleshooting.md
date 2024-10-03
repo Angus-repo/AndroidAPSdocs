@@ -1,110 +1,110 @@
-# 疑難排解
+# Troubleshooting
 
-你可以在許多 wiki 頁面上找到疑難排解的資訊。 此頁面是幫助你找到解決問題資訊的鏈接集合。
+You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
 
-額外的有用資訊可能也會在 [FAQ](../Getting-Started/FAQ.html) 中找到。
+Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
 
-## AAPS 應用程式
+## AAPS app
 
-### 建立 & 更新
+### Building & updating
 
-* [遺失的密鑰庫](troubleshooting_androidstudio-lost-keystore)
-* [疑難排解 AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+- [Lost keystore](troubleshooting_androidstudio-lost-keystore)
+- [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
-### 設定
-* [設定檔](Profiles-troubleshooting-profile-errors)
+### Settings
 
-  ![錯誤：基礎率未對齊到整點](../images/Screen_DifferentPump.png)
+- [Profile](Profiles-troubleshooting-profile-errors)
 
-* [幫浦 - 來自不同幫浦的資料](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
 
-  ![錯誤訊息：來自不同幫浦的資料](../images/BasalNotAlignedToHours2.png)
+- [Pump - data from different pump](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
 
-* [Nightscout 用戶端](../Usage/Troubleshooting-NSClient.html)
+  ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
 
-### 使用說明
-* [碳水化合物值錯誤](COB-calculation-detection-of-wrong-cob-values)
+- [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
 
-   ![錯誤：碳水化合物吸收速度過慢](../images/Calculator_SlowCarbAbsorption.png)
+### Usage
 
-* [SMS 指令](SMS-Commands-troubleshooting)
+- [Wrong carb values](COB-calculation-detection-of-wrong-cob-values)
 
-### 頻繁的藍牙連線問題
+  ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-這可能會發生在各種幫浦上。 除了將 AAPS 排除在任何電池優化之外，你還可以將系統的藍牙應用程式排除在電池優化之外。 這在某些情況下有幫助。 根據你使用的手機，你會以不同方式找到藍牙應用程式。
+- [SMS commands](SMS-Commands-troubleshooting)
 
-這裡是一些如何在特定 Android 手機上找到它們的範例。
+### Frequent bluetooth connection problems
 
+This can happen with various pumps. Apart from excluding AAPS from any battery optimization, you can also exclude the system bluetooth app from battery optimization. This can help in some cases.
+Depending on the phone you use, you will find the bluetooth app differently.
 
-#### Pixel 手機（原生 Android）
+Here are examples how to find them on specific android phones.
 
-* 進入 Android 設定，選擇「應用程式」。
+#### Pixel phones (stock android)
 
-  ![Android 設定¦應用程式](../images/troubleshooting/pixel/01_androidsettings.png)
+- Go to the android settings, select "Apps".
 
-* 選擇「查看所有應用程式」
+  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
 
-  ![查看所有應用程式](../images/troubleshooting/pixel/02_apps.png)
+- Select "See all apps"
 
-* 在右側的選單中，選擇「顯示系統應用程式」。
+  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
 
-  ![顯示系統應用程式](../images/troubleshooting/pixel/03_allapps.png)
+- On the menu on the right, select "Show system" apps.
 
-* 現在搜尋並選擇「藍牙」應用程式。
+  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
 
-  ![藍牙應用程式](../images/troubleshooting/pixel/03_bluetooth.png)
+- Now search and select the app "Bluetooth".
 
-* 點擊「應用程式電池使用情況」並選擇「未優化」。
+  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
 
-  ![藍牙電池優化](../images/troubleshooting/pixel/04_btunrestricted.png)
+- Click the "App battery usage" and select "Not optimized".
 
+  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
 
-#### Samsung 手機
+#### Samsung phones
 
-* 進入 Android 設定，選擇「應用程式」
+- Go to the android settings, select "Apps"
 
-* 在圖示上（1）選擇變更排序演算法，然後選擇「顯示系統應用程式」（2）。
+- On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
 
-  ![應用程式篩選器](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![顯示系統應用程式](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* 現在搜尋藍牙應用程式並選擇它來查看其設定。
+- Now search the bluetooth app and select it to see its settings.
 
-  ![藍牙應用程式](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
-* 選擇「電池」。
+- Select "battery".
 
-  ![電池](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* 將其設為「未優化」。
+- Set it to "Not optimized"
 
-  ![未優化](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
-
+  ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
 ## CGM
 
-* [一般問題](GeneralCGMRecommendation-troubleshooting)
-* [Dexcom G6](DexcomG6-troubleshooting-g6)
-* [Libre 3](Libre3-experiences-and-troubleshooting)
-* [Libre 2](Libre2-experiences-and-troubleshooting)
-* [xDrip - 無 CGM 資料](xdrip-identify-receiver)
-* [xDrip - Dexcom 疑難排解](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+- [General](GeneralCGMRecommendation-troubleshooting)
+- [Dexcom G6](DexcomG6-troubleshooting-g6)
+- [Libre 3](Libre3-experiences-and-troubleshooting)
+- [Libre 2](Libre2-experiences-and-troubleshooting)
+- [xDrip - no CGM data](xdrip-identify-receiver)
+- [xDrip - Dexcom troubleshooting](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
-## 幫浦
+## Pumps
 
-* [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo 總覽](Accu-Chek-Combo-Tips-for-Basic-usage)
-* [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
-* [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+- [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
+- [Accu-Chek Combo general](Accu-Chek-Combo-Tips-for-Basic-usage)
+- [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+- [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
+- [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
-## 手機
+## Phones
 
-* [Jelly](../Usage/jelly.md)
-* [華為藍牙 & 電池優化](../Usage/huawei.md)
+- [Jelly](../Usage/jelly.md)
+- [Huawei bluetooth & battery optimization](../Usage/huawei.md)
 
-## 智慧型手錶
+## Smartwatches
 
-* [疑難排解 Wear 應用程式](Watchfaces-troubleshooting-the-wear-app)
-* [Sony Smartwatch 3](../Usage/SonySW3.md)
+- [Troubleshooting Wear app](Watchfaces-troubleshooting-the-wear-app)
+- [Sony Smartwatch 3](../Usage/SonySW3.md)
