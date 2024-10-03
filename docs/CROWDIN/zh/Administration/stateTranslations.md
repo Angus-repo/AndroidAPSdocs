@@ -1,4 +1,4 @@
-# 應用程式與文件的翻譯狀態
+# state of translation for app and the documentation
 
 狀態每小時更新一次，僅反映 Crowdin 上的狀態。
 
@@ -13,13 +13,13 @@
 PR 的接受是一項手動任務，將儘快完成。
 ```
 
-## 應用程式翻譯狀態
+## state app translation
 
 每種語言的**應用程式**翻譯狀態（國家代碼、翻譯百分比、校對百分比）。
 
 ![應用程式翻譯狀態](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## 文件翻譯狀態
+## state documentation translation
 
 每種語言的**文件**翻譯狀態（國家代碼、翻譯百分比、校對百分比）。
 
