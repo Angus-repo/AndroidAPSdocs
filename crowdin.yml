@@ -1,24 +1,13 @@
+languages_mapping:
+  zh-TW:
+    two_letters_code: zh_TW
+  zh-CN:
+    two_letters_code: zh_CN
+    
 files:
   - source: /docs/EN/**/*.md
     translation: /docs/CROWDIN/%two_letters_code%/**/%original_file_name%
-    languages_mapping:
-      zh-TW:
-        two_letters_code: zh_TW
-      zh-CN:
-        two_letters_code: zh_CN
-
   - source: /docs/EN/**/*.rst
     translation: /docs/CROWDIN/%two_letters_code%/**/%original_file_name%
-    languages_mapping:
-      zh-TW:
-        two_letters_code: zh_TW
-      zh-CN:
-        two_letters_code: zh_CN
-
   - source: /docs/EN/images/**/*
     translation: /docs/CROWDIN/%two_letters_code%/images/**/%original_file_name%
-    languages_mapping:
-      zh-TW:
-        two_letters_code: zh_TW
-      zh-CN:
-        two_letters_code: zh_CN
