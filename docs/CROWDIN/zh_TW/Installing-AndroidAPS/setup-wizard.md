@@ -1,10 +1,10 @@
 # AAPS設定嚮導
 
-當你首次啟動 **AAPS** 時，會由“**設定嚮導**”引導，快速完成應用程式的基本配置。 **設定嚮導** 會引導你，避免遺漏關鍵設定。 例如，**權限設置** 對於正確設置 **AAPS** 至關重要。
+When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
 
-然而，並不要求在第一次使用 **設定嚮導** 時就完全配置所有內容，你可以輕鬆退出嚮導並稍後返回。 在 **設定嚮導** 之後，有三條可用的路徑來進一步優化/更改配置。 這些路徑將在下一部分進行解釋。 因此，如果你在設定嚮導中跳過了一些選項，沒關係，你可以輕鬆地稍後配置他們。
+However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimise/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
 
-在使用 **設定嚮導** 期間和直接之後，你可能不會注意到 **AAPS** 中有任何顯著的可見變化。 要啟用你的 **AAPS** 循環，你必須遵循 **目標** 來逐步啟用各個功能。 你將在設定嚮導的結尾開始**目標1**。 你是 **AAPS** 的主人，而不是他控制你。
+During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
 
 ```{admonition} Preview Objectives
 :class: note
@@ -12,7 +12,7 @@
 
 ```
 
-根據以往經驗，我們了解到，初學者經常會給自己施加壓力，盡快設置 **AAPS**，這會導致挫敗感，因為這是一個巨大的學習曲線。
+From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
 
 所以，請慢慢來配置你的循環，運作良好的 **AAPS** 循環帶來的好處是巨大的。
 
@@ -23,7 +23,7 @@
 
 ## AAPS設定嚮導逐步指南
 
-### 歡迎訊息
+### Welcome message
 
 這只是歡迎訊息，你可以透過點擊“下一步”按鈕跳過：
 
@@ -31,7 +31,7 @@
 
 ### 許可協議
 
-在最終用戶許可協議中，有關於使用 **AAPS** 的法律方面的重要訊息。 請仔細閱讀。
+在最終用戶許可協議中，有關於使用 **AAPS** 的法律方面的重要訊息。 請仔細閱讀。 Please read it carefully.
 
 如果你不暸解或不同意最終用戶許可協議，請不要使用 **AAPS**！
 
@@ -43,7 +43,7 @@
 
 **AAPS** 需要一些條件才能正常運作。
 
-在接下來的幾個畫面中，你將被問到幾個問題，你必須同意才能使 **AAPS** 工作。 嚮導本身會解釋為何需要相關設置。
+In the following screens you are asked several questions you have to agree to, to get **AAPS** working. The Wizard itself explains why it asks for the relevant setting.
 
 在此畫面中，我們提供更多背景訊息，將更技術性的內容轉換為常用語言，或解釋其原因。
 
@@ -51,13 +51,13 @@
 
 ![image](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-智慧型手機的電池消耗仍然是需要考慮的因素，因為電池性能仍然相當有限。 因此，智慧型手機上的Android操作系統在允許應用程式運作和消耗CPU時間（因此消耗電池電量）方面有嚴格的限制。
+智慧型手機的電池消耗仍然是需要考慮的因素，因為電池性能仍然相當有限。 因此，智慧型手機上的Android操作系統在允許應用程式運作和消耗CPU時間（因此消耗電池電量）方面有嚴格的限制。 Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可能在其他應用程式中也見過這一點。 如果你想查看藍牙，通常需要位置權限。
 
-然而，**AAPS** 需要定期運作，_例如_ 每隔幾分鐘接收一次血糖讀取值，然後應用演算法根據你的設定決定如何處理血糖水平。 因此，必須讓Android允許一些權限。
+然而，**AAPS** 需要定期運作，_例如_ 每隔幾分鐘接收一次血糖讀取值，然後應用演算法根據你的設定決定如何處理血糖水平。 因此，必須讓Android允許一些權限。 Therefore it must be allowed to do so by Android.
 
-你可以透過確認設置來完成這一操作。
+You do this by confirming the setting.
 
-請點擊“請求許可”按鈕：
+Please click the "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_125721.png)
 
@@ -69,7 +69,7 @@
 
 雖然停用社交媒體應用程式的通知是一個很好的功能，但你必須允許 **AAPS** 向你發送通知。
 
-請點擊“請求許可”按鈕：
+Please click the "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_125813.png)
 
@@ -85,27 +85,27 @@
 
 ![image](../images/setup-wizard/Screenshot_20231202_125851.png)
 
-Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可能在其他應用程式中也見過這一點。 如果你想查看藍牙，通常需要位置權限。
+Android links the use of bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access bluetooth.
 
-**AAPS** 使用藍牙與你的CGM和胰島素幫浦進行通訊，前提是他們直接由 **AAPS** 控制，而不是透過 **AAPS** 使用的其他應用程式。 具體細節可能因設置而異。
+**AAPS** 使用藍牙與你的CGM和胰島素幫浦進行通訊，前提是他們直接由 **AAPS** 控制，而不是透過 **AAPS** 使用的其他應用程式。 具體細節可能因設置而異。 Details may differ from setup to setup.
 
-請點擊“請求許可”按鈕：
+Click the "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_125924.png)
 
-這很重要。 否則，**AAPS** 將無法正常工作。
+This is important. Otherwise **AAPS** can not work properly at all.
 
-點擊“使用應用程式時”：
+Click "While using the app":
 
 ![image](../images/setup-wizard/Screenshot_20231202_125939.png)
 
-點擊“下一步”按鈕：
+Click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130002.png)
 
-**AAPS** 需要將訊息記錄到智慧型手機的永久儲存中。 永久儲存意味著即使重啟智慧型手機後，他仍然可用。 其他訊息則會遺失，因為他們沒有儲存到永久儲存中。
+**AAPS** 需要將訊息記錄到智慧型手機的永久儲存中。 永久儲存意味著即使重啟智慧型手機後，他仍然可用。 其他訊息則會遺失，因為他們沒有儲存到永久儲存中。 Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
 
-請點擊“請求許可”按鈕：
+Click the "ASK FOR PERMISSION" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130012.png)
 
@@ -115,9 +115,9 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 你將被告知需要重新啟動智慧型手機以使更改生效。
 
-請**不要現在停止設定嚮導**。 你可以在完成設定嚮導後再進行。
+請**不要現在停止設定嚮導**。 你可以在完成設定嚮導後再進行。 You can do it after finishing the Setup Wizard.
 
-點擊“確定”然後點擊“下一步”按鈕：
+Click "OK" and then the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
@@ -125,7 +125,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 由於 **AAPS** 的配置包含一些敏感資料（_例如_ 查看你的Nightscout伺服器的API_KEY），因此他透過你可以在此處設置的密碼進行加密。
 
-第二句話非常重要，請務必**不要遺失你的主密碼**。 請記下他，_例如_ 儲存到Google雲端硬碟上。 Google雲端硬碟是一個不錯的地方，因為他由Google為你進行備份。 你的智慧型手機或電腦可能會崩潰，並且你可能沒有實際副本。 如果你忘記了主密碼，日後可能很難恢復你的設定檔案和在 **目標** 中的進展。
+The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
 
 填寫密碼兩次後，請點擊“下一步”按鈕：
 
@@ -135,14 +135,14 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 在這裡，你可以設置自動崩潰和使用報告服務的使用。
 
-這不是強制性的，但使用他是一種良好的做法。
+It's not mandatory, but it is good practice to use it.
 
 他幫助開發人員更好地了解你如何使用應用程式，並告知他們發生了哪些崩潰。
 
 他們將獲得：
 
-1. 應用程式崩潰的資訊，否則他們無法知道，因為他們自己的設置中一切運作正常，並且
-2. 發送的資料（崩潰訊息）中包含崩潰發生的情況以及使用了何種配置的相關訊息。
+1. The information that the app crashed, which they would not otherwise know since in their own set-up everything works fine and
+2. In the send data (crash information), there is information about the circumstances under which the crash happened, and what kind of configuration is being used.
 
 因此，這有助於開發人員改進應用程式。
 
@@ -154,11 +154,11 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 ![image](../images/setup-wizard/Screenshot_20231202_130147.png)
 
-填寫你的“聯絡訊息”後，點擊“確定”按鈕。 聯絡訊息可以是你在Facebook、Discord等平台上的身份訊息…… 只需提供你認為能透過最佳方式聯繫你的訊息：
+After filling in your "contact information" click the "OK" button. Contact information can be your identification on Facebook, on Discord, ... 只需提供你認為能透過最佳方式聯繫你的訊息：
 
 ![image](../images/setup-wizard/Screenshot_20231202_135748.png)
 
-點擊“下一步”按鈕：
+Click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
@@ -170,7 +170,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 ### 顯示設置
 
-在這裡，你可以選擇感測器顯示的血糖範圍，這將顯示在你設置的範圍內的“範圍內”數值。 你可以暫時保留預設值，稍後再進行編輯。
+Here you select the range for the sensor glucose display, which will be shown as "in range" between the values you set. You can leave it as the default values for now, and edit it later.
 
 你選擇的值只會影響圖表的圖形展示，其他方面不會受到影響。
 
@@ -188,9 +188,9 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 
 你也可以在這裡進行其他配置，但首次運作我們只會專注於報告伺服器。
 
-如果你目前無法設置，請暫時跳過。 你可以稍後再進行配置。
+If you are not able to set it up at the moment, skip it for now. You can configure it later.
 
-如果你在左側勾選某個項目，那麼在右側你可以選擇勾選可見性（眼睛）框，這會將該外掛放置在 **AAPS** 主頁的頂部選單中。 如果你在此處配置報告伺服器，請務必選擇顯示可見性。
+If you select an item here on the left tick box, on the right you can then ticking the visibility (eye) box, which will place this plugin in the upper menu on the **AAPS** home screen. Please select the visibility too if you configure your reporting server at this point.
 
 在此示例中，我們選擇Nightscout作為報告伺服器，並將進行配置。
 
@@ -213,13 +213,13 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ![image](../images/setup-wizard/Screenshot_20231202_140952.png)
 
-輸入你的Nightscout URL，這是你的個人Nightscout伺服器。 這只是你自己設置的URL，或者是從你的Nightscout服務提供商那裡獲得的。
+輸入你的Nightscout存取權杖。 這是你配置的Nightscout伺服器的存取權杖。 沒有這個權杖，無法存取。 輸入你的Nightscout URL，這是你的個人Nightscout伺服器。 這只是你自己設置的URL，或者是從你的Nightscout服務提供商那裡獲得的。
 
 請點擊“確定”按鈕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141051.png)
 
-輸入你的Nightscout存取權杖。 這是你配置的Nightscout伺服器的存取權杖。 沒有這個權杖，無法存取。
+Enter your nightscout access token. This is the access token for your Nightscout server you configured. Without this token, access will not work.
 
 如果你目前沒有，請查看 **AAPS** 文檔中的報告伺服器設置說明。
 
@@ -237,9 +237,9 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ![image](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-現在先不要啟用這些開關。 我們只是介紹一下可能在未來配置的選項，讓你熟悉這些設定。 目前還不需要設置他們。
+For now, leave the switches disabled. We only walked to the screen to make you familar with possible options you might configure in the future. At the moment there is no need to do it.
 
-返回上一個螢幕並選擇“連線設置”。
+Go back to the previous screen before and select "Connection settings".
 
 在這裡，你可以配置如何將資料傳輸到報告伺服器。
 
@@ -249,19 +249,19 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 如果不確定，建議保持所有選項啟用。
 
-返回上一個螢幕並選擇“進階設置”。
+Go back to the screen before and select "Advanced Settings".
 
 ![image](../images/setup-wizard/Screenshot_20231202_141326.png)
 
-如果你希望在報告伺服器中獲取應用程式啟動的相關訊息，請啟用“記錄應用啟動到NS”。 這有助於你遠端了解應用程式是否已重新啟動，特別是作為照護者時。
+Enable "Log app start to NS" if you want get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver.
 
 現在可能會關心確認 **AAPS** 是否正確配置，但之後通常不需要在Nightscout中檢查 **AAPS** 啟動或停止的情況。
 
 啟用“從錯誤中建立公告”和“從需要碳水化合物警報中建立公告”。
 
-保持“減慢上傳”為停用狀態。 你只會在特殊情況下使用他，例如當需要將大量資料傳輸到Nightscout伺服器時，而Nightscout伺服器處理資料速度較慢。
+Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transfered to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
-返回兩次，回到外掛列表，然後選擇 "下一步" 以進入下一個螢幕：
+Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
@@ -269,19 +269,19 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 在這裡，你可以在 **AAPS** 中設置你的名字。
 
-這可以是任何名字。 他只是用來區分不同用戶。
+It can be anything. It's just for differentiating users.
 
 為了簡單起見，只需輸入名字和姓氏。
 
-按“下一步”進入下一個螢幕。
+按“完成”進入下一個螢幕。
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
 ### 病人類型
 
-在這裡，你可以選擇你的“患者類型”，這很重要，因為 **AAPS** 軟體根據患者的年齡設有不同的限制。 這對安全至關重要。
+在這裡，你可以選擇你的“患者類型”，這很重要，因為 **AAPS** 軟體根據患者的年齡設有不同的限制。 這對安全至關重要。 This is important for security and safety reasons.
 
-在這裡，你還可以設置每餐的**最大注射量**。 也就是說，你在典型餐點中需要的最大注射量。 這是一個安全功能，用於幫助避免在餐前注射時發生意外的過量注射。
+Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
 
 第二個限制與此類似，但涉及你預期的最大碳水化合物攝入量。
 
@@ -291,9 +291,9 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ### 使用的胰島素
 
-選擇在幫浦中使用的胰島素類型。
+Select the type of insulin being used in the pump.
 
-胰島素名稱應該很好暸解。
+The insulin names should be self-explanatory.
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
@@ -306,9 +306,9 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ### 血糖來源
 
-選擇你使用的血糖來源。 請閱讀[血糖來源](../Configuration/BG-Source.md)的文檔。
+Select the BG source you are using. Please read the documentation for your [BG source](../Configuration/BG-Source.md).
 
-由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 在這裡我們使用Dexcom G6與BYODA應用程式的示例：
+As there are several options available, we don't explain the configuration for all of them here. 由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 在這裡我們使用Dexcom G6與BYODA應用程式的示例：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141912.png)
 
@@ -320,17 +320,17 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 如果你正在使用 Dexcom G6 與 BYODA，點擊齒輪按鈕來訪問 BYODA 的設定。
 
-啟用“上傳血糖資料到NS”和“記錄感測器變更到NS”。
+Enable the "Upload BG data to NS" and "Log sensor change to NS".
 
 返回並按 "下一步" 以進入下一個螢幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
-### 設定檔
+### Profile
 
 現在我們進入設定嚮導中的一個非常重要的部分。
 
-請在嘗試輸入以下畫面的設定檔案詳細資訊之前閱讀設定檔案的文檔。
+Please read the documentation about profiles before you try to enter your profile details on the following screen.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
@@ -341,11 +341,11 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 一直以來，如果給一個機器人輸入不正確資訊，那麼他將無法正常。同理，**AAPS** 只能依賴於他所獲取的資訊。如果你的設定檔過強，你將冒著低血糖的風險；如果過弱，你則冒著高血糖的風險。
 ```
 
-按“下一步”進入下一個螢幕。 輸入一個“設定檔案名稱”：
+按“下一步”進入下一個螢幕。 Enter a "profile name":
 
 ![image](../images/setup-wizard/Screenshot_20231202_142027.png)
 
-長期來看，如果有需要，你可以擁有多個設定檔案。 這裡我們只建立一個。
+You can have several profiles in the long-term if needed. We only create one here.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: information
@@ -356,7 +356,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 不要用他來實際循環！
 ```
 
-輸入你的胰島素作用時間（DIA），單位為小時。 然後按“IC”：
+Enter your Duration of insulin Action (DIA) in hours. 點擊“確定”然後點擊“下一步”按鈕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_142143.png)
 
@@ -364,29 +364,29 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ![image](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-按“ISF”。 輸入你的ISF值：
+按“ISF”。 輸入你的ISF值： 按“基礎速率”。 輸入你的基礎值：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143009.png)
 
-按“基礎速率”。 輸入你的基礎值：
+Press "BAS". Enter your basal values:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143623.png)
 
-按“TARG”。 輸入你的血糖目標值。
+Press "TARG". 按“TARG”。 輸入你的血糖目標值。
 
-對於開放循環，這個目標可以設置一個較大的範圍，否則 **AAPS** 會不停通知你更改臨時基礎率或其他設定，這可能會讓人感到疲憊。
+For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
 
-稍後，對於閉環循環，你通常只會有一個上限和下限值。 這讓 **AAPS** 更容易達到目標，並幫助你更好地控制糖尿病。
+Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
 
 輸入/確認目標值：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143709.png)
 
-點擊“儲存”來儲存設定檔案：
+Save the profile by clicking on "SAVE":
 
 ![image](../images/setup-wizard/Screenshot_20231202_143724.png)
 
-儲存後將出現一個新按鈕“啟用設定檔案”。
+After saving a new buttom "Activate Profile" occurs.
 
 ```{admonition} Several defined but only one active profile
 :class: information
@@ -397,7 +397,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ![image](../images/setup-wizard/Screenshot_20231202_143741.png)
 
-設定檔案切換對話框出現。 在這種情況下，讓他保持預設。
+The profile switch dialogue appears. In this case let it stay as preset.
 
 ```{admonition} Several defined but only one active profile
 :class: information
@@ -408,9 +408,9 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ![image](../images/setup-wizard/Screenshot_20231202_143808.png)
 
-設定檔案切換的確認對話框出現。
+A confirmation dialog for the profile switch appears.
 
-你可以按“確定”確認他。 按“下一步”進入下一個螢幕：
+You can confirm it with pressing "OK". 點擊“下一步”按鈕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143822.png)
 
@@ -418,19 +418,19 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
-### 胰島素幫浦
+### Insulin pump
 
-現在你要選擇你的胰島素幫浦。
+Now you are selecting your insulin pump.
 
-你會看到一個重要的警告對話框。 請閱讀並按“確定”。
+你會看到一個重要的警告對話框。 請閱讀並按“確定”。 Please read it, and press "OK".
 
-如果你已經在之前的步驟中設置了設定檔案，並且知道如何連線幫浦，現在可以隨時連線他。
+If your have already setup your profile in the steps before and you know how to connect your pump, feel free to connect it now.
 
-否則，請使用左上角的箭頭退出設定嚮導，讓 **AAPS** 首先顯示一些血糖值。 你可以隨時返回或使用直接配置選項（不使用嚮導）。
+否則，請使用左上角的箭頭退出設定嚮導，讓 **AAPS** 首先顯示一些血糖值。 你可以隨時返回或使用直接配置選項（不使用嚮導）。 You can come back anytime or use one of the direct configuration options (not using the Wizard).
 
-請閱讀你的[胰島素幫浦](../Getting-Started/Pump-Choices.md)文檔。
+Please read the documentation for your [insulin pump](../Getting-Started/Pump-Choices.md).
 
-按“下一步”進入下一個螢幕。
+按“下一步”進入下一個螢幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_143909.png)
 
@@ -442,9 +442,9 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ### APS 演算法
 
-選擇OpenAPS SMB演算法作為你的APS演算法。 即使有這個名稱，SMB功能在你熟悉 **AAPS** 並完成第一階段目標之前是停用的。 無論如何，OpenAPS SMB 相較於 OpenAPS AMA 更新且通常效果更好。
+當你首次啟動 **AAPS** 時，會由“**設定嚮導**”引導，快速完成應用程式的基本配置。 **設定嚮導** 會引導你，避免遺漏關鍵設定。 例如，**權限設置** 對於正確設置 **AAPS** 至關重要。 Despite the name the SMB feature of the algorithm is disabled until you are familar with AAPS and already worked through the first objectives. 選擇OpenAPS SMB演算法作為你的APS演算法。 即使有這個名稱，SMB功能在你熟悉 **AAPS** 並完成第一階段目標之前是停用的。 無論如何，OpenAPS SMB 相較於 OpenAPS AMA 更新且通常效果更好。
 
-在初期，你的設定檔案通常不如經驗豐富後好，所以這個功能在初期被停用。 由於在開始時，你的設定檔案通常不如經驗豐富後那麼好，因此該功能在初期被停用。
+The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. As in the begining your profile is in general not as good as after some time of experience the feature is disabled in the begining.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
@@ -467,7 +467,7 @@ OpenAPS AMA 是最基本的演算法，不支援微量注射來修正高值。�
 
 讓“開放循環”保持選中狀態。
 
-按“下一步”進入下一個螢幕：
+點擊“下一步”按鈕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
@@ -481,7 +481,7 @@ OpenAPS AMA 是最基本的演算法，不支援微量注射來修正高值。�
 
 ### 開始目標1
 
-你現在進入目標。 這是獲取 **AAPS** 進一步功能的資格。
+You are entering now the Objectives. The qualification for access to further **AAPS** features.
 
 我們從目標1開始，即使此刻我們的設置尚未完全準備好成功完成此目標。
 
@@ -493,17 +493,17 @@ OpenAPS AMA 是最基本的演算法，不支援微量注射來修正高值。�
 
 你會看到你已經取得了一些進展，但還有其他區域需要完成。
 
-按“完成”進入下一個螢幕。
+按“下一步”進入下一個螢幕。
 
 ![image](../images/setup-wizard/Screenshot_20231202_144135.png)
 
 你來到了 **AAPS** 的主頁面。
 
-在這裡，你會看到 **AAPS** 中的訊息，顯示你已設置好設定檔案。
+Here you find the information message in **AAPS** that you set your profile.
 
-這是在我們切換到新設定檔案時完成的。
+This was done when we switched to our new profile.
 
-你可以點擊“延後”，他會消失。
+You can click "SNOOZE" and it will disappear.
 
 ![image](../images/setup-wizard/Screenshot_20231202_144156.png)
 
