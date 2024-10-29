@@ -13,7 +13,7 @@
 
 - **Pod 通訊裝置**
 
-> 將你的 AAPS 啟用手機與 Eros 世代的 Pod 通訊的組件。
+> Component that bridges communication from your AAPS enabled phone to Eros generation pods.
 > 
 > > - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink 官網](https://getrileylink.org/product/orangelink)
 > > - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
@@ -33,19 +33,19 @@
 > 
 > > - 新的 Omnipod pod（Eros 世代 - **不包括 DASH**）
 
-這些說明假定你正在啟動新的 pod 會話；如果不是這種情況，請耐心等待，並嘗試在下次更換 pod 時開始此過程。
+These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and attempt to begin this process on your next pod change.
 
 ## 在你開始之前
 
 **安全第一** - 不要在無法從錯誤中恢復的環境中嘗試此過程（必備項包括額外的 pod、胰島素、已充電的 RileyLink 和手機設備）。
 
-**當 AAPS Omnipod 驅動程式啟用你的 pod 後，你的 Omnipod PDM 將無法再運作**。 以往你使用 Omnipod PDM 向 Omnipod Eros pod 發送指令。 Omnipod Eros pod 只允許單一裝置向其發送通訊。 從那時起，成功啟動 Pod 的裝置將是唯一能夠與其通訊的裝置。 這意味著你透過 AAPS Omnipod 驅動程式和 RileyLink 啟用了 Omnipod Eros pod，**你將無法再使用你的 PDM 與 pod 通訊**。 AAPS Omnipod 驅動程式與 RileyLink 現在是你的替代 PDM。 *這並不意味著你應該丟掉你的 PDM，建議保留他作為備用並在 AAPS 運作不正常時使用。*
+**當 AAPS Omnipod 驅動程式啟用你的 pod 後，你的 Omnipod PDM 將無法再運作**。 以往你使用 Omnipod PDM 向 Omnipod Eros pod 發送指令。 Omnipod Eros pod 只允許單一裝置向其發送通訊。 The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. 這意味著你透過 AAPS Omnipod 驅動程式和 RileyLink 啟用了 Omnipod Eros pod，**你將無法再使用你的 PDM 與 pod 通訊**。 AAPS Omnipod 驅動程式與 RileyLink 現在是你的替代 PDM。 *這並不意味著你應該丟掉你的 PDM，建議保留他作為備用並在 AAPS 運作不正常時使用。</p>
 
-**你可以配置多個 RileyLink，但一次只能選擇一個 RileyLink 與 pod 通訊。** AAPS Omnipod 驅動程式支援在 RileyLink 配置中添加多個 RileyLink，但一次只能選擇一個 RileyLink 用來發送和接收通訊。
+**你可以配置多個 RileyLink，但一次只能選擇一個 RileyLink 與 pod 通訊。 ** AAPS Omnipod 驅動程式支援在 RileyLink 配置中添加多個 RileyLink，但一次只能選擇一個 RileyLink 用來發送和接收通訊。
 
-**當 RileyLink 超出範圍時，你的 pod 不會關閉。** 當你的 RileyLink 超出範圍或信號被阻擋無法與活動 pod 通訊時，你的 pod 將繼續輸送基礎胰島素。 啟用 pod 時，在 AAPS 中定義的基礎設定檔將會被編程到新的 pod 中。 如果你失去與 pod 的連線，他會恢復到此基礎設定檔。 在 RileyLink 返回範圍並重新建立連線之前，你將無法發出新的指令。
+**當 RileyLink 超出範圍時，你的 pod 不會關閉。 ** 當你的 RileyLink 超出範圍或信號被阻擋無法與活動 pod 通訊時，你的 pod 將繼續輸送基礎胰島素。 Upon activating a pod, the basal profile defined in AAPS will be programmed into the new pod. Should you lose contact with the pod, it will revert to this basal profile. 在 RileyLink 返回範圍並重新建立連線之前，你將無法發出新的指令。
 
-**AAPS 不支援30 分鐘基礎速率設置。** 如果你是 AAPS 新手並且首次設定基礎速率設置，請注意以半小時為間隔的基礎速率設置是不可支援的，你將需要調整基礎速率設置到整點開始。 例如，如果你有一個 1.1 個單位的基礎速率，他從 09:30 開始並持續 2 小時，結束於 11:30，這將無法運作。  你需要將這 1.1 單位的基礎速率更新為 9:00-11:00 或 10:00-12:00 的時間範圍。  儘管 Omnipod 硬件本身支援半小時基礎速率設置，AAPS 目前無法在其演算法中考慮到這些設置。
+**AAPS 不支援30 分鐘基礎速率設置。 ** 如果你是 AAPS 新手並且首次設定基礎速率設置，請注意以半小時為間隔的基礎速率設置是不可支援的，你將需要調整基礎速率設置到整點開始。 例如，如果你有一個 1.1 個單位的基礎速率，他從 09:30 開始並持續 2 小時，結束於 11:30，這將無法運作。  你需要將這 1.1 單位的基礎速率更新為 9:00-11:00 或 10:00-12:00 的時間範圍。  儘管 Omnipod 硬件本身支援半小時基礎速率設置，AAPS 目前無法在其演算法中考慮到這些設置。
 
 ## 在 AAPS 中啟用 Omnipod 驅動程式
 
@@ -63,7 +63,7 @@
 
 在 **RileyLink 選擇** 畫面上按下 **掃描** 按鈕，並透過掃描所有可用的藍牙設備從列表中選擇你的 RileyLink。 當正確選擇後，你將返回幫浦驅動程式選擇畫面，顯示 Omnipod 驅動程式設定及你所選擇的 RileyLink 和其 MAC 地址。
 
-按下 **下一步** 按鈕繼續完成其餘的 **設定嚮導。** 選擇 RileyLink 後，初始化可能需時達一分鐘，此時 **下一步** 按鈕會變為可點擊狀態。
+**電池電量報告**可能**適用於其他裝置（不包括 RileyLink）**
 
 有關如何設置您的藥囊通訊設備的詳細步驟列示於[RileyLink 設置部分](#rileylink-setup)。
 
@@ -89,7 +89,7 @@
 
 請 **向左滑動** 到 **Omnipod (POD)** 標籤，在那裡你可以管理所有幫浦和 RileyLink 功能（在沒有啟動幫浦會話的情況下，有些功能是不啟用或可見的）：
 
-> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) 重新整理幫浦連線和狀態
+> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Refresh Pod connectivity and status
 > 
 > ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) 幫浦管理（啟動，停用，播放測試嗶聲，RileyLink 狀態和幫浦歷史記錄）
 
@@ -113,21 +113,21 @@
 
    > ![RileyLink_Setup_3](../images/omnipod/RileyLink_Setup_3.png) ![RileyLink_Setup_4](../images/omnipod/RileyLink_Setup_4.png)
 
-4. 成功選擇後，將返回 Omnipod 設定頁面，其中列出你**目前選擇的 RileyLink 的 MAC 地址 (6)。**
+4. 成功選擇後，將返回 Omnipod 設定頁面，其中列出你**目前選擇的 RileyLink 的 MAC 地址 (6)。 **
 
    > ![RileyLink_Setup_5](../images/omnipod/RileyLink_Setup_5.png)
 
-5. 驗證在 **Omnipod (POD)** 標籤中 **RileyLink 狀態 (1)** 顯示為 **已連線。** **幫浦狀態 (2)** 欄位應顯示 **無活動幫浦**；否則，請嘗試前一步驟或退出 AAPS 看是否重新整理連線。
+5. 這些說明假定你正在啟動新的 pod 會話；如果不是這種情況，請耐心等待，並嘗試在下次更換 pod 時開始此過程。
 
    > ![RileyLink_Setup_6](../images/omnipod/RileyLink_Setup_6.png)
 
 (OmnipodEros-activating-a-pod)=
 
-### 啟動幫浦
+### Activating a Pod
 
 在你可以啟動幫浦之前，請確保你已正確配置並連線你的 RileyLink 在 Omnipod 設定中
 
-*提醒：幫浦的配對通訊範圍有限，是由於安全保護措施所致。 配對前幫浦無線電信號較弱，但在成功配對後他將以全信號功率運作。 在這些步驟中，請確保您的藥囊[位於靠近](#optimal-omnipod-and-rileylink-positioning) (~30 公分以內) 的範圍內，但不要放在 RileyLink 的上面或緊鄰其旁邊。\*</p>
+*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. 在這些步驟中，請確保您的藥囊[位於靠近](#optimal-omnipod-and-rileylink-positioning) (~30 公分以內) 的範圍內，但不要放在 RileyLink 的上面或緊鄰其旁邊。 \*</p>
 
 01. 導航到 **Omnipod (POD)** 標籤，點擊 **幫浦管理 (1)** 按鈕，然後點擊 **啟動幫浦 (2)**。
 
@@ -183,11 +183,11 @@
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
 
-### 停用幫浦
+### Deactivating a Pod
 
-在正常情況下，幫浦的壽命應為三天（72 小時），並在提示幫浦過期警告後額外持續8小時，總計80小時的幫浦使用。
+Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
 
-要停用 Pod（不論是過期還是 Pod 故障）：
+To deactivate a pod (either from expiration or from a pod failure):
 
 1. 轉到 **Omnipod (POD)** 標籤，點擊 **幫浦管理 (1)** 按鈕，在 **幫浦管理** 畫面上點擊 **停用幫浦 (2)** 按鈕。
 
@@ -217,13 +217,13 @@
 
    > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png)
 
-### 暫停與恢復胰島素輸送
+### Suspending and Resuming Insulin Delivery
 
-以下過程將向你展示如何暫停和恢復胰島素幫浦的投放。
+The process below will show you how to suspend and resume insulin pump delivery.
 
 *注意 – 如果你未看到暫停按鈕*，那麼他尚未啟用在 Omnipod (POD) 標籤中顯示。 在[Omnipod 設置](#omnipod-settings)中啟用**Omnipod 標籤中的顯示暫停交付按鈕**設置。
 
-#### 暫停胰島素投放
+#### Suspending Insulin Delivery
 
 使用此指令將啟用的 POD 暫停。 在暫停狀態下， POD 將不再輸送任何胰島素。 此指令模擬原始 Omnipod PDM 發送給啟用 POD的暫停功能。
 
@@ -239,7 +239,7 @@
 
    > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
-#### 恢復胰島素輸送
+#### Resuming Insulin Delivery
 
 使用此指令指示目前暫停的活動 Pod 恢復胰島素輸送。 指令成功處理後，胰島素將根據目前時間並使用活動基礎率設定檔恢復正常輸送。 Pod 將再次接受注射、TBR 和 SMB 的指令。
 
@@ -257,7 +257,7 @@
 
 ### 確認 POD 警報
 
-*注意 - 如果你看不到「確認警報」按鈕，這是因為該按鈕僅在 POD 即將到期或低庫存警報觸發時在 Omnipod（POD）頁籤中有條件顯示。*
+*NOTE - if you do not see an ACK ALERTS button, it is because it is conditionally displayed on the Omnipod (POD) tab ONLY when the pod expiration or low reservoir alert has been triggered.*
 
 以下流程將告訴你如何確認並解除 POD 在達到 72 小時（3 天）過期警報時間限制前的警報聲。 此警報時間限制由**距關機的時數**設置在 Omnipod 警報設定中定義。 POD 的最長使用壽命為 80 小時（3 天 8 小時），然而 Insulet 建議不要超過 72 小時（3 天）限制。
 
@@ -317,7 +317,7 @@
 
    > ![RileyLink_Bluetooth_Reset_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
    > 
-   > 如果在處理藍牙重新整理指令時 POD 通訊設備無法響應或超出手機範圍，則將顯示一條警告訊息，提供兩個選項。
+   > If the pod communication device is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
 
    - **靜音（1）**將靜音目前警報。
    - **確定（2）**將確認此警告，並允許用戶再次嘗試重新建立藍牙連線。
@@ -332,7 +332,7 @@
 
 #### POD 通訊設備和啟用 POD設定
 
-此頁面將提供目前配置的 POD 通訊設備和目前啟用的 Omnipod Eros  POD 的資訊、狀態和設定配置資訊。
+This screen will provide information, status, and settings configuration information for both the currently configured pod communication device and the currently active Omnipod Eros pod.
 
 1. 進入**Omnipod（POD）**頁籤並按下** POD 管理（1）**按鈕以查看** POD 管理**選單，然後按下**RileyLink 狀態（2）**按鈕以查看目前配置的**RileyLink（3）**和啟用 POD**設備（4）**設定。
 
@@ -362,7 +362,7 @@
 
 #### RileyLink 和啟動 Pod 歷史
 
-此頁面按時間倒序提供 RileyLink 或目前連線的 POD 每個狀態或動作的訊息。 整個歷史記錄僅適用於目前啟動的 POD ， POD 更換後，此歷史記錄將被清除，並且僅顯示新註冊的 POD 的事件。
+This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
 
 1. 進入 **Omnipod (POD)** 標籤頁，按下 **POD 管理 (1)** 按鈕以查看 **Pod Management** 選單，然後按下 **Pod History (2)** 按鈕以查看 **Settings** 和 **History** 頁面。 點擊 **HISTORY (3)** 文字以顯示 RileyLink 和目前啟動 POD 會話的全部歷史記錄。
 
@@ -382,7 +382,7 @@
 
 以下是主要 AAPS 介面中 **Omnipod (幫浦)** 分頁的圖示與狀態欄位佈局及其含義的說明。
 
-*注意：若 Omnipod (幫浦) 分頁中的任何訊息報告為 (不確定)，則需要按下重新整理按鈕以清除並更新幫浦狀態。*
+*NOTE: If any message in the Omnipod (POD) tab status fields report (uncertain) then you will need to press the Refresh button to clear it and refresh the pod status.*
 
 > ![Omnipod_分頁](../images/omnipod/Omnipod_Tab.png)
 
@@ -394,17 +394,17 @@
 - *RileyLink 準備就緒* - 幫浦連線裝置開啟並正在初始化藍牙連線
 - *已連線* - 幫浦連線裝置已開啟電源、連線並能夠透過藍牙進行通訊。
 
+- **幫浦上的時間：**顯示啟動幫浦上的目前時間。
+
+- **幫浦到期時間：**顯示啟動幫浦到期的日期和時間。
+
+- **韌體版本：**顯示啟動幫浦的韌體版本。
+
 - **幫浦位址：**顯示目前參照的啟動幫浦位址
 
 - **LOT：**顯示啟動幫浦的 LOT 號碼
 
 - **TID：**顯示幫浦的序號。
-
-- **韌體版本：**顯示啟動幫浦的韌體版本。
-
-- **幫浦上的時間：**顯示啟動幫浦上的目前時間。
-
-- **幫浦到期時間：**顯示啟動幫浦到期的日期和時間。
 
 - **幫浦狀態：**顯示啟動幫浦的狀態。
 
@@ -426,37 +426,37 @@
 
 - **儲液量：** 當儲液量超過 50 單位時顯示 50+ 單位。 低於此值時，精準單位將以黃色文字顯示。
 
-- **總輸送量：** 顯示從儲液中輸送的胰島素總單位數。 *注意，這是一個近似值，因為幫浦啟動和填充過程並不精準。*
+- **總輸送量：** 顯示從儲液中輸送的胰島素總單位數。 *注意，這是一個近似值，因為幫浦啟動和填充過程並不精準。 *
 
 - **錯誤：** 顯示遇到的最後一個錯誤。 檢查[藥囊歷史](#view-pod-history)、[RileyLink 歷史](#rileylink-and-active-pod-history)及日誌文件，以了解過去的錯誤及更多詳細信息。
 
 - **啟用 Pod 警報：** 保留目前啟用 Pod 上運作的警報。 通常在幫浦到期超過 72 小時且原生幫浦嗶聲警告運作時使用。
 
-### 圖示
+### Icons
 
 - **重新整理：**
 
   > ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
   > 
-  > 向啟動幫浦發送重新整理指令以更新通訊
+  > Sends a refresh command to the active pod to update communication
   > 
-  > 用於重新整理 Pod 狀態並消除顯示 (不確定) 訊息的狀態欄位。
+  > Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
   > 
   > 請參閱下面的[故障排除部分](#troubleshooting)以獲取額外信息。
 
-- **幫浦管理：**
+- **POD MGMT:**
 
   > ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png)
   > 
-  > 導航至幫浦管理選單
+  > Pod 管理選單
 
-- **確認警告：**
+- **ACK ALERTS:**
 
   > ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
   > 
-  > 按下此按鈕將停用幫浦到期嗶聲和通知。
+  > When pressed this will disable the pod expiration beeps and notifications.
   > 
-  > 此圖示僅在幫浦時間超過到期警告時間時顯示 成功解除後，該圖示將不再出現。
+  > Button is displayed only when pod time is past expiration warning time Upon successful dismissal, this icon will no longer appear.
 
 - **設定時間：**
 
@@ -464,35 +464,35 @@
   > 
   > 按下此按鈕將幫浦的時間更新為手機上的目前時間。
 
-- **暫停：**
+- **SUSPEND:**
 
   > ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
   > 
-  > 暫停啟動幫浦
+  > Suspends the active pod
 
-- **繼續注射：**
+- **RESUME DELIVERY:**
 
   > ![resume](../images/omnipod/ICONS/omnipod_overview_resume.png)
   > 
-  > > 繼續目前已暫停的啟動幫浦
+  > > Resumes the currently suspended, active pod
 
-### Pod 管理選單
+### Pod Management Menu
 
 以下是從 **Omnipod (幫浦)** 分頁進入的 **幫浦管理** 選單中的圖示佈局及其含義的說明。
 
 > ![Omnipod_分頁_幫浦管理](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
-- **註冊 Pod**
+- **Activate Pod**
 
-  > ![啟動幫浦](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
+  > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
-  > 幫浦啟動並註冊新幫浦
+  > Primes and activates a new pod
 
 - **停用 Pod**
 
-  > ![停用幫浦](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
+  > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
-  > 停用目前啟動幫浦。
+  > Deactivates the currently active pod.
   > 
   > 部分配對的幫浦將忽略此指令。
   > 
@@ -504,25 +504,25 @@
 
   > ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
   > 
-  > 按下此按鈕時，幫浦將播放單次測試嗶聲聲。
+  > Plays a single test beep on the pod when pressed.
 
 - **丟棄幫浦**
 
   > ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
   > 
-  > 按下此按鈕將停用並丟棄無反應幫浦的狀態。
+  > Deactivates and discards the pod state of an unresponsive pod when pressed.
   > 
   > 此按鈕僅在滿足特定條件時顯示，因為無法進行正確停用：
   > 
   > > - 當 **幫浦未完全配對** 且因此忽略停用指令時。
   > > - 當 **幫浦卡住** 在配對過程的步驟之間時。
-  > > - 當 **幫浦完全無法配對。**
+  > > - **電池電量報告**僅**適用於 OrangeLink、EmaLink 和 DiaLink 裝置**
 
-- **幫浦歷史**
+- **Pod history**
 
   > ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
   > 
-  > 顯示啟動幫浦的活動歷史
+  > Displays the active pod activity history
 
 - **RileyLink 統計：**
 
@@ -537,7 +537,7 @@
 
   > ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
   > 
-  > 按下此按鈕將重置目前連線的幫浦連線裝置配置。
+  > When pressed this button resets the currently connected pod communication device configuration.
   > 
   > > - 當通訊開始時，特定資料將發送至 RileyLink 並設置為 > - 記憶體暫存器已設置 > - 通訊協議已設置 > - 已設置調頻無線電頻率 
   > > - 請參見本表末尾的[附加說明](#reset-rileylink-config-notes)
@@ -546,13 +546,13 @@
 
   > ![pulse_log](../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png)
   > 
-  > > 將啟動幫浦的脈搏日誌發送至剪貼簿
+  > > Sends the active pod pulse log to the clipboard
 
 (OmnipodEros-reset-rileylink-config-notes)=
 
 #### *重置 RileyLink 配置說明*
 
-- 此功能的主要用途是當目前啟動的幫浦連線裝置無法響應且通訊處於卡住狀態時使用。
+- The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
 - 若幫浦連線裝置關閉再重新開啟，則需要按下 **重置 RileyLink 配置** 按鈕，以便在幫浦連線裝置配置中設置這些通訊參數。
 - 若未完成此步驟，則 AAPS 需要在幫浦連線裝置電源循環後重新啟動。
 - 此按鈕**無需**在不同幫浦連線裝置之間切換時按下。
@@ -590,7 +590,7 @@ Omnipod 驅動程式設置可透過左上角的**漢堡選單**中的**設置生
 
 ### 確認嗶聲提示
 
-提供來自藥筒的確認聲音提示，用於注射、基礎輸注、SMB以及TBR輸送和變更。
+Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
 - **\*注射嗶聲啟用：**啟用或停用在注射送達時的確認嗶聲聲。
 - **\*基礎率嗶聲啟用：**啟用或停用在設定新基礎率、取消啟動基礎率或更改目前基礎率時的確認嗶聲聲。
@@ -621,7 +621,7 @@ Omnipod 驅動程式設置可透過左上角的**漢堡選單**中的**設置生
 
 ### 其他
 
-提供進階設定以協助除錯。
+Provides advanced settings to assist debugging.
 
 - **顯示暫停注射按鈕於 Omnipod 分頁：**隱藏或顯示 Omnipod (幫浦) 分頁中的暫停注射按鈕。
 - **顯示脈搏日誌按鈕於幫浦管理選單：**隱藏或顯示幫浦管理選單中的脈搏日誌按鈕。
@@ -676,10 +676,10 @@ Omnipod 驅動程式設置可透過左上角的**漢堡選單**中的**設置生
 
 ## 手動操作 (ACT) 標籤
 
-此分頁在主要 AAPS 文件中有詳細說明，但該分頁中有一些項目是針對 Omnipod 幫浦與管式幫浦不同之處，特別是在應用新幫浦的過程後。
+This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod pod differs from tube based pumps, especially after the processes of applying a new pod.
 
 1. 進入主 AAPS 介面中的 **手動操作 (ACT)** 標籤。
-2. 在 **照護入口 (1)** 部分下，以下 3 個欄位將在**每次更換幫浦後**將**年齡重設**為 0 天 0 小時：**胰島素** 和 **套管**。 這是根據 Omnipod 幫浦的設計和運作方式所設。 每個 Pod 內都包含 **幫浦電池** 和 **胰島素儲液器**。 由於 Pod 直接將套管插入應用 Pod 的皮膚上，因此 Omnipod 幫浦不使用傳統的管路。 *因此，在更換 Pod 後，這些數值的時間將自動重置為零。* **幫浦電池時間** 不會被報告，因為 Pod 中的電池壽命始終比 Pod 的最大壽命（80 小時）長。
+2. 在 **照護入口 (1)** 部分下，以下 3 個欄位將在**每次更換幫浦後**將**年齡重設**為 0 天 0 小時：**胰島素** 和 **套管**。 This is done because of how the Omnipod pump is built and operates. 每個 Pod 內都包含 **幫浦電池** 和 **胰島素儲液器**。 Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *因此，在更換 Pod 後，這些數值的時間將自動重置為零。 * **幫浦電池時間** 不會被報告，因為 Pod 中的電池壽命始終比 Pod 的最大壽命（80 小時）長。
 
 > ![操作_分頁](../images/omnipod/Actions_Tab.png)
 
@@ -699,9 +699,9 @@ Omnipod Eros 幫浦中的胰島素量報告並不精準。  這是因為無法�
 電池電量報告是一個可以啟用的設置，當啟用時，將返回幫浦連線裝置（如 OrangeLink、EmaLink 或 DiaLink）的目前電池電量。  RileyLink 硬體無法報告其電池電量。  電池電量是在每次與幫浦連線後報告的，因此在充電時，可能不會觀察到線性的增長。  手動重新整理將更新目前電池電量。  當支援的幫浦連線裝置已中斷連線時，會報告 0% 的電量值。
 
 > - **RileyLink 硬體無法報告電池電量**
-> - **Omnipod 設置中**必須啟用** "顯示 OrangeLink/EmaLink/DiaLink 報告的電池電量" 設定才能報告電池電量值**
-> - **電池電量報告**僅**適用於 OrangeLink、EmaLink 和 DiaLink 裝置**
-> - **電池電量報告**可能**適用於其他裝置（不包括 RileyLink）**
+> - ****Omnipod 設置中**必須啟用** "顯示 OrangeLink/EmaLink/DiaLink 報告的電池電量" 設定才能報告電池電量值****
+> - **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
+> - **Battery Level reporting MAY work for other devices (excluding RileyLink)**
 > - **SMS** - 當有實際電量時，返回目前電池電量，否則將不返回 n/a 值
 > - **Nightscout** - 當有實際電量時，報告電池電量，否則不會報告 n/a 值
 
@@ -717,9 +717,9 @@ Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 �
 
 此故障與指令的 Pod 狀態不正確或胰島素輸送指令中的錯誤有關。 我們建議使用者切換至 Nightscout 客戶端，並在**設置生成器**➜**一般**➜**NSClient**➜**齒輪圖示**➜**進階設定**中**僅上傳 (停用同步)**，以防止可能的故障。
 
-### 幫浦無法連線警報
+### Pump Unreachable Alerts
 
-建議將幫浦無法使用警報設置為**120 分鐘**，方法是前往右上角的三點選單，選擇**偏好設定**➜**本地警報**➜**幫浦無法使用的門檻值 \[分鐘\]**，並將其設置為**120**。
+It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
 
 (OmnipodEros-import-settings-from-previous-aaps)=
 ### 從先前的 AAPS 匯入設定
@@ -730,19 +730,19 @@ Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 �
 2. 匯出你的設定並將副本存儲在安全的地方。
 3. 卸載舊版本的 AAPS 並重新啟動手機。
 4. 安裝新版本的 AAPS 並確認你沒有啟動的幫浦會話。
-5. 匯入你的設定並註冊你的新幫浦。
+5. Import your settings and activate your new pod.
 
 ### Omnipod 驅動程式警報
 
 請注意，Omnipod 驅動程式在**首頁總覽分頁**中會呈現各種獨特的警報，其中大多數是資訊性的，可以忽略，然而有些會要求使用者採取行動以解決警報原因。 你可能會遇到的主要警報總結如下：
 
-#### 沒有啟動幫浦
+#### No active Pod
 
 未偵測到啟動的幫浦會話。 按下**稍後提醒**可以暫時忽略此警報，但只要未啟動新 Pod，他就會持續觸發。 當此警報啟動後，會自動靜音。
 
-#### 幫浦已暫停
+#### Pod suspended
 
-此訊息警告幫浦已暫停。
+Informational alert that Pod has been suspended.
 
 #### 設置基礎率失敗。 注射可能已暫停！ 請手動從 Omnipod 標籤中重新整理 Pod 狀態並在需要時恢復輸送。
 
@@ -750,7 +750,7 @@ Pod 基礎率設定失敗的資訊性警報，你需要按下 Omnipod 標籤上�
 
 #### 無法確認 SMB 注射是否成功。 如果你確定注射未成功，應手動從治療中刪除 SMB 條目。
 
-警報 SMB 注射成功無法驗證，你需要檢查 Omnipod 分頁中的*最後注射*欄位，確認 SMB 注射是否成功，若未成功，請從治療分頁中移除此條目。
+Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
 
 #### 不確定「任務注射/TBR/SMB」是否完成，請手動確認是否成功。
 
@@ -758,7 +758,7 @@ Pod 基礎率設定失敗的資訊性警報，你需要按下 Omnipod 標籤上�
 
 以下是一些可能出現不確定通知的例子。
 
-- **注射** - 不確定的注射無法自動驗證。 該通知將保持，直到下一次注射，但手動幫浦重新整理可清除訊息。 *預設情況下，針對此類通知類型啟用了警報嗶聲，因為使用者需要手動確認他們。*
+- **注射** - 不確定的注射無法自動驗證。 The notification will remain until the next bolus but a manual pod refresh will clear the message. *預設情況下，針對此類通知類型啟用了警報嗶聲，因為使用者需要手動確認他們。 *
 - **TBR、幫浦狀態、設定檔切換、時間變更** - 手動幫浦重新整理可清除訊息。 預設情況下，此類通知類型的警報嗶聲被停用。
 - **幫浦時間偏差 -** 當幫浦時間與手機時間偏差過大時，AAPS 循環功能將難以運作，並且做出精準的預測和注射建議。 如果幫浦和手機的時間偏差超過 5 分鐘，則 AAPS 會報告幫浦處於暫停狀態，並在幫浦狀態中顯示 "處理時間變更" 訊息。 一個額外的**設定時間**圖示將出現在 Omnipod (幫浦) 分頁的底部。 點擊 "設定時間" 將同步幫浦時間與手機時間，然後你可以點擊 "繼續注射" 按鈕以恢復正常幫浦操作。
 
