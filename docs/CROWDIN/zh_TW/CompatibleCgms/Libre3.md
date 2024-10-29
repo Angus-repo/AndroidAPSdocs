@@ -34,7 +34,7 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 
 - 如果尚未設定，請下載 [xDrip+](https://github.com/NightscoutFoundation/xDrip) 並按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的指示操作。
 - 在 xDrip+ 中選擇 "Libre2（修補版應用程式）" 作為資料來源。
-- 如果需要，請在「不常見的設定」→「額外日誌記錄設定」→「日誌記錄的額外標籤」下輸入 "BgReading:d,xdrip libre_receiver:v"。 這將記錄額外的錯誤訊息以便進行問題排除。
+- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. This will log additional error messages for troubleshooting.
 
 ![xDrip+ LibreLink 日誌記錄](../images/Libre2_Tags.png)
 
@@ -72,8 +72,8 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 ![Libre 序列號](../images/libre3/step_13.jpg)
 
 2. 現在，只需使用手機的 NFC 閱讀器掃描你的新傳感器。 如果過程成功開始，Juggluco 會顯示通知。
-3. 當你準備停用舊傳感器時，請點擊螢幕左上角的空白區域打開 Juggluco 選單。
-4. 選擇過期的傳感器並點擊「終止」。
+3. When you are ready to deactivate the old sensor, then open the Juggluco menu by clicking anywhere in the empty space in the upper left hand corner of the screen.
+4. Select the exired sensor and tap "Terminate"
 
 ![終止傳感器](../images/libre3/step_14.jpg)
 
@@ -84,10 +84,10 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 如果傳感器是使用已登入 Libreview 帳戶啟動的，也可以在 Juggluco 和 Libre 3 應用程式之間切換作為接收器。 這需要以下步驟：
 
 1. 從 Google Play 商店安裝 Libre 3 應用程式。
-2. 使用啟動傳感器的 Libreview 帳戶設定 Libre 3 應用程式。
+2. Set up the Libre 3 app with the Libreview account with which the sensor was activated.
 3. 在 Android 設定中強制停止 Juggluco 應用程式。
-4. 在 Libre 3 選單中，點擊「啟動傳感器」，選擇「是」，「下一步」，然後掃描你的傳感器。
-5. 幾分鐘後，血糖 值應該會顯示在 Libre 3 應用程式中。
+4. In the Libre 3 menu, click "Start Sensor", select "Yes", "Next" and scan your sensor.
+5. After some minutes, the BG-Values should be visible within Libre 3 App.
 
 要從 Libre 3 應用程式切換到 Juggluco，你需要透過 Android 設定強制停止 Libre 3 應用程式，然後執行步驟 1 和步驟 2。
 
