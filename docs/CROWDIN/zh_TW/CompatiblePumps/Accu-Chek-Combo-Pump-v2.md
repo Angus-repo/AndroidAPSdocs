@@ -21,11 +21,11 @@
 請注意以下限制：
 
 * 目前不支援擴展注射和多波注射 (您可以使用 [擴展碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md) 作為替代)。
-* 僅支援一個基礎設定檔（第一個）。
-* 如果幫浦上的目前活動設定檔不是設定檔 1，則循環模式將被停用。 這種情況會持續到設定檔 1 被設為活動檔案；當這樣做後，下一次 AAPS 連線時（無論是自動還是因為用戶在 combov2 用戶介面中按下了重新整理按鈕），他會注意到設定檔 1 是目前的活動檔案，並重新啟用循環模式。
+* Only one basal profile (the first one) is supported.
+* The loop is disabled if the currently active profile on the pump isn't profile no. 1. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because the user presses the Refresh button in the combov2 user interface), it will notice that profile no. 1 is the current one, and enable the loop again.
 * 如果循環請求取消正在運作的 TBR，Combo 將設置一個 90% 或 110% 的 TBR，持續 15 分鐘。 這是因為實際取消 TBR 會在幫浦上觸發警報，並產生大量震動，這些震動無法停用。
 * 藍牙連線的穩定性隨不同手機而異，可能會出現「幫浦無法使用」的警報，這時幫浦無法再建立連線。 如果發生此錯誤，請確認藍牙已啟用，按下 Combo 標籤中的重新整理按鈕以檢查是否是臨時問題，如果仍無法建立連線，重啟手機，這通常能解決問題。
-* 另一個問題是重啟無法解決，必須按幫浦上的按鈕（這會重置幫浦的藍牙堆疊），幫浦才能再次接受來自手機的連線。
+* There is another issue were a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
 * 避免在幫浦上設定 TBR，因為循環控制 TBR。 在幫浦上偵測到新的 TBR 可能需要長達 20 分鐘，並且 TBR 的效果僅從偵測時開始計算，因此最壞情況下可能有 20 分鐘的 TBR 沒有反應在 IOB 中。
 
 如果你一直在使用依賴於單獨 Ruffy 應用程式的舊 Combo 驅動程式，並希望切換到這個新驅動程式，請注意需要重新進行配對——Ruffy 和新 Combo 驅動程式無法共享配對資訊。 此外，請確保 Ruffy 未_在運作_。 如果有疑問，長按 Ruffy 應用程式圖示以調出上下文選單。 在該選單中，按「應用程式資訊」。 在剛剛打開的介面中，按「強制停止」。 這樣可以確保啟動的 Ruffy 實例不會干擾新驅動程式。
@@ -69,7 +69,7 @@
 
   - **必要設定**（在螢幕截圖中以綠色標記）：
 
-     * 將/保持選單配置設為「標準」，這將只顯示幫浦支援的選單/操作，並隱藏不支援的部分（如延長注射/多波注射、多重基礎率），使用這些功能會限制循環功能，因為無法在安全的情況下運作循環。
+     * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
      * 確認 _快速資訊文本_ 設定為「快速資訊」（不加雙引號，位於 _胰島素幫浦選項_ 下）。
      * 將 TBR _最大調整_ 設定為 500%
      * 停用 _臨時基礎率的結束訊號_
@@ -81,16 +81,16 @@
      * 根據你的需求設置低匣警報
      * 配置一個適合你治療的最大注射量，以防軟體中的錯誤
      * 同樣地，配置 TBR 的最大持續時間作為防護措施。 允許至少 3 小時，因為選擇中斷幫浦 3 小時會設置 0% 持續 3 小時。
-     * 啟用幫浦的按鍵鎖定，以防止從幫浦進行注射，特別是當幫浦之前已經使用過且快速注射是習慣時。
+     * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
      * 將顯示逾時和選單逾時分別設置為最小值 5.5 和 5。 這允許 AAPS 更快地從錯誤情況中恢復，並減少在這些錯誤期間可能發生的震動次數。
 
-  ![用戶選單設定的截圖](../images/combo/combo-menu-settings.png)
+  ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
   ![TBR 設定的截圖](../images/combo/combo-tbr-settings.png)
 
-  ![注射設定的截圖](../images/combo/combo-bolus-settings.png)
+  ![用戶選單設定的截圖](../images/combo/combo-bolus-settings.png)
 
-  ![胰島素匣設定的截圖](../images/combo/combo-insulin-settings.png)
+  ![注射設定的截圖](../images/combo/combo-insulin-settings.png)
 
 ## 註冊驅動並將其與 Combo 配對
 
@@ -98,7 +98,7 @@
 
   ![組態建置工具 Combo 截圖](../images/combo/combov2-config-builder.png)
 
-* 點擊齒輪圖示以打開驅動設定。
+* Tap the cog-wheel to open the driver settings.
 
 * 在設定用戶介面中，點擊螢幕頂部的 'Pair with pump' 按鈕。 這將打開 Combo 配對用戶介面。 按照螢幕上的指示開始配對。 當 Android 要求允許讓手機對其他藍牙裝置可見時，請按 "允許"。 最終，Combo 會在其螢幕上顯示一個自定義的 10 位配對 PIN，並且驅動程式會請求他。 在相應的欄位中輸入該 PIN。
 
@@ -126,18 +126,18 @@
 
 * 為了驗證你的設置（幫浦與任何導管**中斷連線**以確保安全！），使用 AAPS 設置一個 500％ 的 TBR 持續 15 分鐘並發出注射指令。 幫浦現在應該正在運作 TBR，並且歷史記錄中有注射紀錄。 AAPS 也應顯示活動的 TBR 和已注射的記錄。
 
-* 建議在 Combo 上啟用按鍵鎖定，以防止從幫浦進行注射，特別是之前已經使用幫浦並使用 "快速注射" 功能時。
+* On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
 
 ## 關於配對的注意事項
 
 Accu-Chek Combo 是在藍牙 4.0 發佈之前開發的，僅在第一款 Android 版本發佈一年後。 這就是為什麼他與其他設備配對的方式，與當今 Android 中的方式不100％ 相容。 要完全克服這一點，AAPS 需要系統級別的權限，這僅適用於系統應用程式。 這些應用程式由手機製造商安裝在手機中 - 用戶無法安裝系統應用程式。
 
-其結果是，配對永遠不會是100％無問題的，儘管在這個新驅動程式中已大幅改進。 特別是，在配對過程中，Android 的藍牙 PIN 對話框可能會短暫顯示並自動消失。 但有時，他會停留在螢幕上，並要求輸入 4 位數 PIN。 （這與 10 位 Combo 配對 PIN 不同。） 不要輸入任何東西，只需按取消即可。 如果配對未繼續，請按照螢幕上的指示重試配對。
+其結果是，配對永遠不會是100％無問題的，儘管在這個新驅動程式中已大幅改進。 特別是，在配對過程中，Android 的藍牙 PIN 對話框可能會短暫顯示並自動消失。 但有時，他會停留在螢幕上，並要求輸入 4 位數 PIN。 （這與 10 位 Combo 配對 PIN 不同。） 不要輸入任何東西，只需按取消即可。 Do not enter anything, just press cancel. 如果配對未繼續，請按照螢幕上的指示重試配對。
 
 (combov2-tab-contents)=
 ## Accu-Chek Combo 標籤內容
 
-當幫浦已配對時，標籤顯示以下訊息（項目按從上到下的順序列出）：
+The tab shows the following information when a pump was paired (items are listed from top to bottom):
 
 ![成功配對的 Accu-Chek Combo 標籤截圖](../images/combo/combov2-tab-with-pairing.png)
 
@@ -161,9 +161,9 @@ Accu-Chek Combo 是在藍牙 4.0 發佈之前開發的，僅在第一款 Android
 
 Combo 可以在 _遠端終端_ 模式或 _指令_ 模式下透過藍牙操作。 遠端終端模式對應於 Combo 計的 "遠端控制模式"，該模式模擬了幫浦的 LCD 和四個按鈕。 有些指令必須由驅動在此模式下執行，因為他們在指令模式中沒有相應的功能。 後一種模式要快得多，但正如所說範圍有限。 當遠端終端模式註冊時，目前遠端終端螢幕顯示於位於底部 Combo 圖的上方的欄位中。 然而當驅動切換到指令模式時，該欄位將保持空白。
 
-（用戶不影響這一點；驅動完全自主決定使用何種模式。這僅是為了讓用戶知道為什麼有時可以在該欄位中看到 Combo 畫面。） 最底部有一個 「重新整理」 按鈕。
+（用戶不影響這一點；驅動完全自主決定使用何種模式。 這僅是為了讓用戶知道為什麼有時可以在該欄位中看到 Combo 畫面。） 最底部有一個 「重新整理」 按鈕。
 
-這會觸發幫浦狀態的即時更新。 他也用於告訴 AAPS 之前發現的錯誤現在已修復，可以讓 AAPS 再次檢查一切是否正常（更多相關訊息請參閱 [警報部分](combov2-alerts)）。 他還用於讓AAPS知道之前發現的錯誤已修復，並且AAPS可以再次檢查一切是否正常（更多內容請參閱[關於警報的部分](#alerts-warnings-and-errors-and-how-they-are-handled)）。
+At the very bottom, there is the "Refresh" button. This triggers an immediate pump status update. 他也用於告訴 AAPS 之前發現的錯誤現在已修復，可以讓 AAPS 再次檢查一切是否正常（更多相關訊息請參閱 [警報部分](combov2-alerts)）。
 
 ## 偏好設定
 
@@ -172,7 +172,7 @@ Combo 可以在 _遠端終端_ 模式或 _指令_ 模式下透過藍牙操作。
 ![Accu-Chek Combo 偏好設定截圖](../images/combo/combov2-preferences.png)
 
 1. _與幫浦配對_：這是一個可以按下的按鈕，用於與 Combo 配對。 如果已經配對了幫浦，他將無法使用。
-2. _取消幫浦配對_：取消配對已配對的 Combo；與項目1相反。 如果沒有已配對的幫浦，他將無法使用。
+2. _取消幫浦配對_：取消配對已配對的 Combo；與項目1相反。 It is disabled if no pump is paired.
 3. _發現持續時間（以秒為單位）_：配對時，驅動會使手機對幫浦可見。 這控制了這種可見性持續多久。 預設選擇最大值（300 秒 = 5 分鐘）。 Android 不允許可見性無限期持續，因此必須選擇一個持續時間。
 4. _自動偵測並自動輸入胰島素儲存庫變更_：如果啟用，通常透過 Action 標籤中的 "注射/填充" 按鈕由用戶完成的 "儲存庫變更" 操作。 這在[下面進一步詳細說明](#autodetecting-and-automatically-entering-battery-and-reservoir-changes)。
 5. _自動偵測並自動輸入電池更換_：如果啟用，通常由用戶透過 Action 標籤中的 "幫浦電池變更" 按鈕完成的 "電池更換" 操作。 這在[下面進一步詳細說明](#autodetecting-and-automatically-entering-battery-and-reservoir-changes)。
@@ -216,11 +216,11 @@ Combo 以遠端終端螢幕的形式顯示警報。 警告會顯示一個“Wx�
 * 當 AAPS 與幫浦進行通訊時（幫浦上顯示藍牙標誌時），請不要按任何按鈕。 這樣做會中斷藍牙連線。 只有在建立連線時出現問題時才這樣做 (請參見[上述的 "開始之前" 部分](#before-you-begin))。
 * 在幫浦注射時請不要按任何按鈕。 特別是，不要嘗試透過按下按鈕來取消警報。 請參閱[有關警報的部分](#alerts-warnings-and-errors-and-how-they-are-handled)以獲取更詳細的解釋。
 
-## 無法建立與 Combo 連線時的檢查清單
+## Checklist for when no connection can be established with the Combo
 
 驅動程式會盡最大努力連線到 Combo，並使用幾個技巧以最大化可靠性。 然而，有時連線無法建立。 以下是一些解決此情況的步驟。
 
 1. 按一下 Combo 的按鈕。 有時，Combo 的藍牙堆疊變得無反應，不再接受連線。 按一下 Combo 的按鈕並顯示 LCD 螢幕內容，藍牙堆疊會重置。 大部分情況下，這是解決連線問題所需的唯一步驟。
 2. 重啟手機。 如果手機的藍牙堆疊本身有問題，則可能需要這樣做。
 3. 如果 Combo 的電池蓋已經老化，考慮更換他。 老舊的電池蓋可能會導致 Combo 的電源供應問題，從而影響藍牙。
-4. 如果連線嘗試仍然失敗，考慮解除配對並重新配對幫浦。
+4. If connection attempts still keep failing, consider unpairing and then re-pairing the pump.

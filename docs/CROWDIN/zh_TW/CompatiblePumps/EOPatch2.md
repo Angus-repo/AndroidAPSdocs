@@ -2,9 +2,9 @@
 
 此貼片需使用速效 U-100 類型胰島素，例如 NovoRapid 或 Humalog。 依照醫生的處方，使用適合你的速效胰島素，並注射處方劑量。
 
-使用此貼片時，最小可注射劑量為 0.05 U。因此，基礎速率（Profile BAS）應設置為至少 0.05 U/hr 或更多，並以 0.05 U/hr 的間隔調整，否則基礎速率與實際輸注量之間可能會出現誤差。 同樣地，注射劑量也必須設定並以最小輸注量 0.05 U 輸注。
+使用此貼片時，最小可注射劑量為 0.05 U。 因此，基礎速率（Profile BAS）應設置為至少 0.05 U/hr 或更多，並以 0.05 U/hr 的間隔調整，否則基礎速率與實際輸注量之間可能會出現誤差。 同樣地，注射劑量也必須設定並以最小輸注量 0.05 U 輸注。
 
-## 幫浦設定
+## Pump Setup
 1. 在 AAPS 主畫面上，點擊左上角的漢堡選單，進入組態建置工具。
 1. 在幫浦部分選擇「EOPatch2」。
 1. 按返回鍵回到主畫面。
@@ -15,7 +15,7 @@
 ## 設定
 在主畫面頂部選擇「EOPATCH2」，以進入「EOPATCH2」頁籤。
 
-點擊右上角三個點，選擇「EOPatch2 偏好設定」選單。
+Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
 
 「EOPatch2 偏好設定」選單提供三種通知的設定選項。
 
@@ -25,20 +25,20 @@
 ### 貼片到期提醒
 此提醒功能會通知你目前貼片到期前的剩餘時間。 可設定範圍為 1 至 24 小時，並以 1 小時的增量調整。 預設值為 4 小時。
 
-### 貼片嗶聲提醒
+### Patch buzzer Reminder
 此為除基礎注射外的注射提醒功能。 如果你使用（延長）注射或臨時基礎注射，貼片在注射開始及完成時會發出嗶聲聲。 預設值為關閉。
 
 ![圖片3](../images/EOPatch/Bild3.png)
 
-## 連線貼片
+## Connecting the Patch
 
-### 進入貼片連線畫面。
+### Move to patch connection screen
 
-在主畫面頂部選擇「EOPATCH2」，然後點擊左下角的「啟用貼片」按鈕。
+Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
 
 ![圖片4](../images/EOPatch/Bild4.png)
 
-### 連線貼片
+### Connecting the patch
 將針筒插入貼片的胰島素入口，然後慢慢推動活塞注射胰島素。 當注射的胰島素超過 80U 時，貼片會發出啟動聲（1 次嗶聲），並啟動。 確認嗶聲聲後，點擊畫面上的「開始配對」按鈕。
 
 [警告]
@@ -55,14 +55,14 @@
 [警告]
 
 - 為了進行配對，貼片和智慧型手機之間必須保持在 30 公分內。
-- 貼片啟動完成後，貼片每 3 分鐘會發出一次嗶聲聲，直到配對完成為止。
-- 貼片啟動後，必須在 60 分鐘內完成貼片的應用程序。 如果在 60 分鐘內無法完成應用，則應丟棄貼片。
+- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
+- After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
 
 ![圖片6](../images/EOPatch/Bild6.png) ![圖片7](../images/EOPatch/Bild7.png) ![圖片8](../images/EOPatch/Bild8.png)
 
 
 ### 貼片準備
-移除貼片的膠帶後，檢查針頭是否突出。 如果貼片無問題，點擊「下一步」。
+移除貼片的膠帶後，檢查針頭是否突出。 If there are no problems with the patch, click NEXT.
 
 ![圖片9](../images/EOPatch/Bild9.png)
 
@@ -71,7 +71,7 @@
 
 [警告]
 
-- 請確保貼片膠帶側面平整，使貼片完全貼合於皮膚。
+- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
 - 如果貼片沒有完全貼合，貼片和皮膚之間可能會進入空氣，這可能會削弱貼片的黏合強度和防水效果。
 
 ![圖片10](../images/EOPatch/Bild10.png)
@@ -93,24 +93,24 @@
 
 - 如果在沒有嗶聲聲的情況下進入下一步，將會出現針頭插入錯誤警告。
 
-## 丟棄貼片
-如果胰島素不足、使用期限到期或出現故障，需更換貼片。 每個貼片的建議使用期限為啟動後 84 小時內。
+## Discarding the patch
+Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
 
-### 丟棄貼片
-在主畫面頂部選擇「EOPATCH2」，並點擊底部的「丟棄/更換貼片」按鈕。 在下一個畫面中，點擊「丟棄貼片」按鈕。 確認對話框會再次顯示，若選擇「丟棄貼片」按鈕，則完成丟棄操作。
+### Discarding the patch
+Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
 
 ![圖片13](../images/EOPatch/Bild13.png) ![圖片14](../images/EOPatch/Bild14.png) ![圖片15](../images/EOPatch/Bild15.png) ![圖片16](../images/EOPatch/Bild16.png)
 
-## 暫停與恢復胰島素輸送
-暫停胰島素輸送會取消延長注射與臨時基礎速率。 恢復胰島素輸送時，已取消的延長注射與臨時基礎速率不會自動恢復。 胰島素輸送暫停時，貼片每 15 分鐘會發出聲響。
+## Suspending and Resuming Insulin Delivery
+Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
 
-### 暫停胰島素輸送
+### Suspending insulin delivery
 在主畫面頂部選擇「EOPATCH2」，並點擊右下角的「暫停」按鈕。 在確認框中選擇「確認」，則會出現時間選擇框。 選擇時間後再點擊「確認」按鈕，胰島素輸送會暫停設定的時間。
 
 ![圖片17](../images/EOPatch/Bild17.png) ![圖片18](../images/EOPatch/Bild18.png) ![圖片19](../images/EOPatch/Bild19.png)
 
 
-### 恢復胰島素輸送
+### Resuming insulin delivery
 在主畫面頂部選擇「EOPATCH2」，並點擊右下角的「恢復」按鈕。 在確認對話框中選擇「確認」後，胰島素輸送將恢復。
 
 ![圖片20](../images/EOPatch/Bild20.png) ![圖片21](../images/EOPatch/Bild21.png)
@@ -125,17 +125,17 @@
 
 以下說明不同類型的警報。
 
-| 警報     | 說明                                                               |
-| ------ | ---------------------------------------------------------------- |
-| 儲存量已空  | 當貼片的儲存量用完時發生。                                                    |
-| 貼片到期   | 當貼片使用時間已過期且無法進行更多胰島素注射時發生。                                       |
-| 堵塞     | 當貼片的胰島素入口疑似堵塞時發生。                                                |
-| 開機自檢失敗 | 當貼片在開機後自檢過程中發現意外錯誤時發生。                                           |
-| 不適當的溫度 | 當貼片應用和使用過程中，貼片處於非正常工作溫度範圍內時發生。 要處理此警報，請將貼片移至適當的工作溫度（4.4 至 37°C）。 |
-| 針頭插入錯誤 | 當貼片應用過程中，針頭插入不正常時發生。 檢查貼片的針頭插入邊緣與針頭啟動按鈕是否在同一直線上。                 |
-| 貼片電池錯誤 | 當貼片內部電池即將耗盡並關機時發生。                                               |
-| 貼片啟動錯誤 | 當應用程序無法在貼片啟動後 60 分鐘內完成貼片操作時發生。                                   |
-| 貼片錯誤   | 當貼片在應用和使用過程中遇到意外錯誤時發生。                                           |
+| 警報                         | 說明                                                                                                      |
+| -------------------------- | ------------------------------------------------------------------------------------------------------- |
+| 儲存量已空                      | Occurs when the patch’s reservoir runs out of insulin.                                                  |
+| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.           |
+| 堵塞                         | Occurs when it appears that the patch's insulin inlet is clogged.                                       |
+| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                 |
+| 不適當的溫度                     | 當貼片應用和使用過程中，貼片處於非正常工作溫度範圍內時發生。 要處理此警報，請將貼片移至適當的工作溫度（4.4 至 37°C）。                                        |
+| 針頭插入錯誤                     | 當貼片應用過程中，針頭插入不正常時發生。 檢查貼片的針頭插入邊緣與針頭啟動按鈕是否在同一直線上。                                                        |
+| 貼片電池錯誤                     | Occurs just before the patch’s internal battery runs out and powers off.                                |
+| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted. |
+| 貼片錯誤                       | Occurs when the patch encounters an unexpected error while applying and using the patch.                |
 
 ### 警告
 
@@ -145,12 +145,12 @@
 
 以下說明不同類型的警告。
 
-| 警告       | 說明                                  |
-| -------- | ----------------------------------- |
-| 胰島素暫停結束  | 當使用者設定的暫停時間過後發生。                    |
-| 儲存量過低    | 當貼片內剩餘的胰島素量低於設定值時發生。                |
-| 貼片使用期限到期 | 當貼片使用期已過時發生。                        |
-| 貼片即將到期   | 在貼片必須丟棄前 1 小時發生。                    |
-| 貼片啟動不完整  | 當在配對完成後的階段，由於貼片應用過程中出現中斷超過 3 分鐘時發生。 |
-| 貼片電池電量低  | 當貼片的電池電量不足時發生。                      |
+| 警告                           | 說明                                                                                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
+| 儲存量過低                        | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
+| Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
+| Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
+| Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
+| 貼片電池電量低                      | Occurs when the patch's battery is low.                                                                                               |
 
