@@ -1,102 +1,106 @@
-# 如何為 AAPS 應用程式或文件翻譯文字
+# How to translate strings for the AAPS app or the documentation
 
-* 要翻譯應用程式中使用的文字，請前往 <https://crowdin.com/project/androidaps>，並使用你的 GitHub 帳號登入
-* 要翻譯文件，請查看 <https://crowdin.com/project/androidapsdocs>，並使用你的 GitHub 帳號登入
+* For the the strings used in the app go to [https://crowdin.com/project/androidaps](https://crowdin.com/project/androidaps) and login using your GitHub account
+* For the documentation please visit [https://crowdin.com/project/androidapsdocs](https://crowdin.com/project/androidapsdocs) and login using your GitHub account
 
-* 向文件團隊發送加入請求。 為此，點擊所需語言的國旗，然後在下一頁的右上角點擊“加入”按鈕。 請指定語言，提供一些關於你的資訊以及你的 AAPS 經驗，並說明你想成為翻譯者還是校對者（僅限具有翻譯技能且為進階 AAPS 用戶的人成為校對者）。
+* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
 
-```{admonition} 審閱時間 :class: note
+```{admonition} Time for Approval
+:class: note
 
-審閱是一個手動步驟。 作為非營利組織，我們不提供 SLA，但一般情況下審閱會在 1 天內完成。 如果沒有，請透過 Facebook 或 Discord 聯繫文件團隊。
+The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+```
 
-    <br />* 當我們批准您後，請點擊旗幟
-       ![當我們批准您後，請點擊旗幟](../images/translation_flags.png)
-    
-    ## 應用程式的翻譯
-    
-    (translations-translate-strings-for-AAPS-app)=
-    ### 翻譯 AAPS 應用程式的文字
-    
-    * 如果您對翻譯的文字沒有特別偏好，只需選擇「翻譯全部」按鈕即可開始。 他會顯示需要翻譯的文字。
-    
-       ![點擊翻譯全部](../images/translations-click-translate-all.png)
-    
-    * 如果您想翻譯個別檔案，請透過搜索對話框或樹狀結構搜尋該檔案，然後點擊檔名以開始對該檔案中的文字進行翻譯工作。
-    
-       ![點擊 strings.xml](../images/translations-click-strings.png)
-    
-    * 通過添加新的翻譯文字或使用＆編輯建議來翻譯左側的句子
-    
-       ![翻譯應用程式](../images/translations-translate.png)
-    
-    
-    ### 校對 AAPS 應用程式的文字
-    
-    * 校對者從語言主頁選擇「校對」開始。
-    
-       ![校對模式應用程式](../images/translations-proofreading-mode.png) 
-    
-    
-      並批准翻譯的文字 
-    
-       ![批准文字](../images/translations-proofreading.png)
-    
-    當校對者批准翻譯時，它將被添加到下一個 AAPS 版本中。
-    
-    (translations-translation-of-the-documentation)=
-    ## 文件的翻譯
-    
-    * 點擊您想翻譯的文件頁面名稱
-    
-    ![點擊文件頁面](../images/translation_WikiPage.png)
-    
-    
-    * 逐句翻譯句子
-    
-        1. 黃色文本是你目前正在處理的文本。
-    
-        1. 綠色文本是已翻譯的文本。 你不需要再次翻譯這些。
-    
-        1. 紅色文本是仍需翻譯的文本。
-    
-        1. 這是你目前正在處理的原始文本
-    
-        1. 這是你正在準備的翻譯。 你可以從上方複製文本或選擇下方的建議之一。
-    
-        1. 這些是翻譯建議。 特別是，你可以看到 Crowdin 如何評價這一翻譯是否符合要求，或者這是否只是過去的內容經過文本重新排列而沒有內容更改。
-        1. 按下“儲存”按鈕以儲存翻譯建議。 然後他會提交給校對者進行最終檢查。
-    
-    ![翻譯文件](../images/translation_WikiTranslate.png)
-    
-    * 轉換的頁面在文件中不會發佈，直到 
-    
-        1. 翻譯已校對
-    
-        1. Crowdin 和 Github 之間的同步運作已完成（每小時一次），這會為 Github 建立 PR。
-    
-        1. 該 PR 在 Github 中獲得批准。
-    
-    一般來說，這需要 1-3 天，但在假日期間可能會花費更長時間。
-    
-    ### 翻譯鏈接
-    
-    ```{admonition} 鏈接不再翻譯
-    :class: note鏈接不再翻譯。 過去我們在這裡有一個主題，但由於遷移到 Markdown 和 myst_parser，我們在英文文本中顯式建立標籤，並在底層將這些標籤傳播到其他語言。
-    
-    
+* When we approve you, click the flag ![When we approve you, click the flag](../images/translation_flags.png)
 
-你正在翻譯代表鏈接的文本。 請注意，**不要**移除由一對 `<0></0>` 標籤表示的鏈接，或者如果在同一段中有更多數字的鏈接也不要移除。
+## Translation of the app
 
-這是校對者需要特別注意的事項！
+(translations-translate-strings-for-AAPS-app)=
+### Translate strings for AAPS app
 
-### 校對
+* If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
 
-* 校對者必須切換到校對模式
-    
-    ![文件的校對模式](../images/translation_WikiProofreadingmode.png)
-    
-    並批准翻譯的文本
-    
-    ![批准文本](../images/translations-proofreading.png)
+   ![Click translate all](../images/translations-click-translate-all.png)
 
-* 當校對者批准翻譯後，他將被添加到下一次文件建置中，該建置沒有固定的時間表，按需進行，但通常每週一次，假期期間除外。 為加快過程，你可以通知文件團隊關於新翻譯。
+* If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+
+   ![Click strings.xml](../images/translations-click-strings.png)
+
+* Translate sentences on left side by adding new translated text or use & edit suggestion
+
+   ![Translation app](../images/translations-translate.png)
+
+
+### Proofread strings for AAPS app
+
+* Proofreaders start by selecting "Proofread" when starting from the language home screen.
+
+   ![Proofreading mode app](../images/translations-proofreading-mode.png)
+
+
+  and approve translated texts
+
+   ![approve text](../images/translations-proofreading.png)
+
+When a proofreader approves a translation it will be added to the next version of AAPS.
+
+(translations-translation-of-the-documentation)=
+## Translation of the documentation
+
+* Click the name of the docs page you want to translate
+
+![Click docs page](../images/translation_WikiPage.png)
+
+
+* Translate sentences by sentence
+
+    1. The yellow text is the text you are working at the moment.
+
+    1. The green text is already translated. You don't need to do this again.
+
+    1. The red text is the remaining text which have to be translated.
+
+    1. This is the source text you are working on at the moment
+
+    1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+
+    1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
+    1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+
+![Translation docs](../images/translation_WikiTranslate.png)
+
+* A translated page will not be published in docs before
+
+    1. the translation is proofread
+
+    1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+
+    1. the PR in Github was approved.
+
+In general this needs 1 - 3 days but might during holiday take a little bit longer.
+
+### Translating links
+
+```{admonition} Links are not translated anymore
+:class: note
+
+Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+
+```
+
+You are translating the text which represents the link. Please you have to be carefull **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+
+It's the proofreaders job to have a special look on this!
+
+### Proofreading
+
+* Proofreaders have to switch to Proofreading mode
+
+   ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+
+
+  and approve translated texts
+
+   ![approve text](../images/translations-proofreading.png)
+
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
