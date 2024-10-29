@@ -2,7 +2,7 @@
 
 即使使用官方應用程式，Freestyle Libre 2 傳感器現在也是一款真正的連續血糖監測儀（CGM）。 然而，LibreLink 仍無法將資料傳送至 AAPS。 有幾種解決方案可以將其與 AAPS 搭配使用。
 
-## 1. 使用藍牙橋接器和 OOP
+## 1. 1. 使用藍牙橋接器和 OOP
 
 可以使用藍牙傳輸器與 Libre 2（EU）及一款 [進程外算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) 應用程式。 你可以像使用 [Libre 1](./Libre1.md) 一樣每 5 分鐘接收一次血糖讀取值。
 
@@ -12,19 +12,19 @@ Libre2 OOP 所生成的讀取值與原始讀取器或透過 NFC 掃描的 LibreL
 
 有幾個使用藍牙傳輸器的理由：
 
--   你可以選擇多種 OOP2 校正策略（1）：使用「無校正」獲得讀取器讀取值，或者像 Libre 1 一樣使用「基於原始資料進行校正」，或者最終使用「基於葡萄糖進行校正」來校正讀取器的讀取值。  
+-   你可以選擇多種 OOP2 校正策略（1）：使用「無校正」獲得讀取器讀取值，或者像 Libre 1 一樣使用「基於原始資料進行校正」，或者最終使用「基於葡萄糖進行校正」來校正讀取器的讀取值。   
   請確保停用 OOP1（2）。
 
-    → 漢堡選單 → 設定 → 不常見的設定 → 其他雜項選項 選項
+    → 漢堡選單 → 設定 → 不常見的設定 → 其他雜項選項 選項 options
 
 ![OOP2 校正](../images/Libre2_OOP2Calibration.png)
 
 -   Libre 2 傳感器可像 Libre 1 一樣使用 14.5 天。
--   支援 8 小時的回填資料。
+-   8 hours backfilling is fully supported
 
 備註：傳輸器可以與 LibreLink 應用程式並行使用而不會相互干擾。
 
-## 2. 使用 xDrip+ 直接連線
+## 2. 2. 使用 xDrip+ 直接連線
 
 ```{admonition} Libre 2 EU only
 :class: warning
@@ -36,7 +36,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 -   在[組態建置工具的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中選擇 xDrip+。
 
-## 3. 使用 Diabox
+## 3. 3. 使用 Diabox
 
 - 安裝 [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf)。 在設定中，進入「整合」，啟用「與其他應用程式共享資料」。
 
@@ -44,7 +44,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 - 在[組態建置工具的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中選擇 xDrip+。
 
-## 4. 使用 Juggluco
+## 4. 4. 使用 Juggluco
 
 - 從[此處](https://www.juggluco.nl/Juggluco/download.html)下載並安裝 Juggluco 應用程式。
 - 按照[此處](https://www.juggluco.nl/Juggluco/index.html)的指示操作。
@@ -61,7 +61,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 然後，你需要將 xDrip+ 數據來源設置為 Libre 2 修補應用程式，以從 Juggluco 接收數據。  
 ```
 
-## 5. 使用修補版 LibreLink 應用程式與 xDrip+ 搭配使用
+## 5. 5. 使用修補版 LibreLink 應用程式與 xDrip+ 搭配使用
 
 ```{admonition} Libre 2 EU only
 :class: warning
@@ -84,9 +84,9 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 ![LibreLink 字體檢查](../images/LibreLinkPatchedCheck.png)
 
-確保啟用了 NFC，並為修補版應用程式啟用記憶體和位置權限，啟用自動時間和時區，並在修補版應用程式中至少設定一個鬧鐘。
+Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app.
 
-### 步驟 2：使用修補版應用程式啟動傳感器
+### Step 2: Start the sensor with the patched app
 
 現在只需掃描傳感器即可使用修補版應用程式啟動 Libre2 傳感器。 請確保已設定好所有設定。
 
@@ -104,11 +104,11 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 ![自動時間和時區 + 鬧鐘設定](../images/Libre2_DateTimeAlarms.png)
 
-使用修補版應用程式啟動傳感器，你將無法將其連線到其他應用程式或手機。 如果你卸載修補版應用程式，你將失去鬧鐘和連續的血糖讀取值。
+Once the sensor started with the patched app, you won't be able to connect it to another app/phone. If you uninstall the patched app, you will lose alarms and continuous BG readings.
 
 首次連線傳感器的設置至關重要。 LibreLink 應用程式每 30 秒嘗試與傳感器建立無線連線。 如果缺少一個或多個必要設定，則需要進行調整。 你沒有時間限制來完成此操作。 傳感器會不斷嘗試建立連線。 即使這可能需要幾個小時。 耐心等待，並嘗試不同的設定，切勿急於更換傳感器。
 
-只要在 LibreLink 啟動畫面左上角看到紅色感嘆號「!」， 表示尚未連線，或某些設定阻礙了 LibreLink 發出鬧鐘訊號。 請檢查是否啟用了音效，並確保停用所有可能阻擋應用程式通知的設定。 當感嘆號消失後，應該就會建立連線，並將血糖值傳送到智慧型手機。 這應該在最多 5 分鐘內完成。
+As long as you see a red exclamation mark ("!") 只要在 LibreLink 啟動畫面左上角看到紅色感嘆號「!」， 表示尚未連線，或某些設定阻礙了 LibreLink 發出鬧鐘訊號。 請檢查是否啟用了音效，並確保停用所有可能阻擋應用程式通知的設定。 當感嘆號消失後，應該就會建立連線，並將血糖值傳送到智慧型手機。 This should happen after a maximum of 5 minutes.
 
 ![LibreLink 未連線](../images/Libre2_ExclamationMark.png)
 
@@ -150,7 +150,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 ### 步驟 4：啟動傳感器
 
-- → 漢堡選單 (1) → 啟動傳感器 (2) → 啟動傳感器 (3) → 回答「暫不」(4)。
+- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
 
 ![xDrip+ 啟動 Libre 傳輸器與傳感器 3](../images/xDrip_Libre_Transmitter03.png)
 
@@ -225,4 +225,4 @@ Libre2 傳感器內部包含合理性檢查，用於偵測不正確的傳感器�
 4.  不要過於頻繁地校正。 過於頻繁地校正傳感器通常會導致更差的結果。 當傳感器在平穩狀態下提供良好結果時，請不要再添加新的校正，因為這並不會帶來任何實際效果。 重新檢查狀態每 3-5 天一次就足夠了（當然，仍然是在平穩狀態下）。
 5.  避免在不需要時進行校正。 這聽起來可能很奇怪，但當血糖與組織液葡萄糖的差異只有±10 mg/dL 時，不建議添加新的校正（例如：血糖值 95，Libre 傳感器顯示 100 -> 不要添加 95，血糖值 95，Libre 傳感器顯示 115 -> 添加 95 進行校正）。
 
-一些一般性說明：啟動新傳感器後以及傳感器即將到期時，進行比較測量比每 3-5 天一次的建議更頻繁地進行更有意義。 對於新傳感器和舊傳感器來說，原始值更有可能發生變化，因此需要重新校正。 有時候，傳感器可能無法提供有效的數值。 最有可能的情況是傳感器的讀取值遠低於實際血糖水平（例如，傳感器讀取值：50 mg/dL，血糖值：130 mg/dL），即使經過校正後也是如此。 如果是這種情況，則無法校正該傳感器以報告有效結果。 例如： 當使用修補版 Libre 應用程式時，你可以添加最大 +20 mg/dL 的偏移值。 如果你遇到傳感器提供的值過低，不要猶豫，更換傳感器，因為他不會變得更好。 即使這可能是傳感器故障，但如果經常遇到讀取值過低的情況，請嘗試更換傳感器的位置。 即使在官方推薦的區域（上臂），某些位置可能也無法提供有效資料。 這是一種嘗試錯誤的過程，找到適合你的區域。
+Some general notes: After activating a new sensor and at the sensor’s end of life it does make sense to do comparison measurements more often than 3-5 days as stated in rule nr. 4. 對於新傳感器和舊傳感器來說，原始值更有可能發生變化，因此需要重新校正。 有時候，傳感器可能無法提供有效的數值。 最有可能的情況是傳感器的讀取值遠低於實際血糖水平（例如，傳感器讀取值：50 mg/dL，血糖值：130 mg/dL），即使經過校正後也是如此。 如果是這種情況，則無法校正該傳感器以報告有效結果。 E.g. 例如： 當使用修補版 Libre 應用程式時，你可以添加最大 +20 mg/dL 的偏移值。 如果你遇到傳感器提供的值過低，不要猶豫，更換傳感器，因為他不會變得更好。 即使這可能是傳感器故障，但如果經常遇到讀取值過低的情況，請嘗試更換傳感器的位置。 Even in the official area (upper arm) there might be some locations where the sensors just do not provide valid values. This is some kind of trial end error to find areas that work for you.
