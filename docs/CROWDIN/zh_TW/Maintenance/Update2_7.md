@@ -1,60 +1,60 @@
-# 從 AAPS 2.6 升級後需要進行的必要檢查
+# Necessary checks after update coming from AAPS 2.6
 
-- 當切換到 AAPS 2.7 時，程式碼進行了顯著更改。
-- 因此，在更新後，請務必進行一些更改或檢查設置。
-- 請參見[釋出說明](ReleaseNotes.md#version-270)了解新功能和擴展功能的詳細資訊。
+- The program code was changed significantly when switching to AAPS 2.7.
+- Therefore it is important that you make some changes or check settings after the update.
+- Please see [release notes](ReleaseNotes.md#version-270) for details on new and extended features.
 
-## 檢查血糖資料來源
+## Check BG source
 
-- 更新後檢查血糖資料來源是否正確。
-- 尤其在使用[xDrip+](../CompatibleCgms/xDrip.md)時，BG來源可能會改變為Dexcom應用程式（已修補）。
-- 開啟[組態設置工具](../SettingUpAaps/ConfigBuilder.md#bg-source)（主畫面左上角的漢堡選單）
-- 向下滾動至「血糖資料來源」。
-- 如果需要，請選擇正確的血糖資料來源。
+- Check if BG source is correct after update.
+- Especially when using [xDrip+](../CompatibleCgms/xDrip.md) it might happen, that BG source is changed to Dexcom app (patched).
+- Open [Config builder](../SettingUpAaps/ConfigBuilder.md#bg-source) (hamburger menu on top left side of home screen)
+- Scroll down to "BG source".
+- Select correct BG source if changes are necessary.
 
-![血糖資料來源](../images/ConfBuild_BG.png)
+![BG source](../images/ConfBuild_BG.png)
 
-## 完成考試
+## Finish exam
 
-- AAPS 2.7 包含新的目標 11（在以後的版本中重新編號為目標 10！）針對[自動化](../DailyLifeWithAaps/Automations.md).
-- 您必須完成考試（[目標 3 和 4](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge)），才能完成 [目標 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf)。
-- 例如，如果您尚未完成 [目標 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) 的考試，則在開始 [目標 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf) 之前，您必須先完成考試。
-- 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
+- AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../DailyLifeWithAaps/Automations.md).
+- You have to finish exam ([objective 3 and 4](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf).
+- If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-sensitivity-plugin-dynisf).
+- This will not effect other objectives you have already finished. You will keep all finished objectives!
 
-## 設置主密碼
+## Set master password
 
-- 這是必須的，因為自 2.7 版本起，[匯出設定](ExportImportSettings.md)時會加密。
-- 打開「偏好設定」（主螢幕右上角的三點選單）
-- 點擊「一般」下方的三角形
-- 點擊「主密碼」
-- 輸入密碼，確認密碼並點擊「確定」。
+- Necessary to be able to [export settings](ExportImportSettings.md) as they are encrypted as of version 2.7.
+- Open Preferences (three-dot-menu on top right of home screen)
+- Click triangle below "General"
+- Click "Master-Password"
+- Enter password, confirm password and click ok.
 
-![設置主密碼](../images/MasterPW.png)
+![Set master password](../images/MasterPW.png)
 
-## 匯出設定
+## Export settings
 
-- AAPS 2.7 使用了新的加密備份格式。
-- 您必須在更新到 2.7 版本後[匯出您的設定](ExportImportSettings.md).
-- 來自以前版本的設定檔只能在 AAPS 2.7 中匯入。 匯出將以新格式進行。
-- 確保將匯出的設定不僅存儲在你的手機上，還應至少存儲在一個安全的地方（你的電腦、雲端存儲等）。
-- 如果你使用與先前版本相同的密鑰庫來建置 AAPS 2.7 apk，則可以安裝新版本而無需刪除舊版本。
-- 所有設定以及已完成的目標將保持與之前版本相同。
-- 如果您遺失了金鑰庫，請使用新金鑰庫編譯 2.7 版本，並根據[故障排除部分](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore)中所述從以前的版本匯入設定。
+- AAPS 2.7 uses a new encrypted backup format.
+- You must [export your settings](ExportImportSettings.md) after updating to version 2.7.
+- Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
+- Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
+- If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version.
+- All settings as well as finished objectives will remain as they were in the previous version.
+- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore).
 
-## 自動敏感度調整（提示 - 無需操作）
+## Autosens (Hint - no action necessary)
 
-- 自動敏感度調整已更改為動態切換模型，這模擬了參考設計。
-- 自動敏感度現在會在 24 小時和 8 小時窗口之間切換來計算敏感度。 他會選擇較敏感的那個時間窗口。
-- 如果用戶曾經使用過 oref1，他們可能會注意到系統對變化的反應可能不如預期動態，這是由於 24 小時或 8 小時敏感度的不同。
+- Autosens is changed to a dynamic switching model which replicates the reference design.
+- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive.
+- If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
 
-## 為 Dana RS 設置幫浦密碼（如果使用 Dana RS）
+## Set Pump Password for Dana RS (if using Dana RS)
 
-- 在之前的版本中，[Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) 的幫浦密碼未經檢查。
-- 打開「偏好設定」（螢幕右上角的三點選單）
-- 向下滾動並點擊「Dana RS」旁的小三角形。
-- 點擊「幫浦密碼（僅限 v1）」
-- 輸入幫浦密碼（[預設密碼](../CompatiblePumps/DanaRS-Insulin-Pump.md#default-password) 依韌體版本而異）並按 OK。
+- Pump password for [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) was not checked in previous versions.
+- Open Preferences (three-dot-menu on top right of screen)
+- Scroll down and click triangle next to "Dana RS".
+- Click "Pump password (v1 only)"
+- Enter pump password ([Default password](../CompatiblePumps/DanaRS-Insulin-Pump.md#default-password) is different depending on firmware version) and click OK.
 
-![設置 Dana RS 密碼](../images/DanaRSPW.png)
+![Set Dana RS password](../images/DanaRSPW.png)
 
-要更改 Dana RS 密碼，請按照[Dana RS 頁面](../CompatiblePumps/DanaRS-Insulin-Pump.md#change-password-on-pump)上的說明進行操作。
+To change password on Dana RS follow instructions on [DanaRS page](../CompatiblePumps/DanaRS-Insulin-Pump.md#change-password-on-pump).
