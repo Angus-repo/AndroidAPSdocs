@@ -6,7 +6,118 @@
 
 See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
+There are two ways to build the APK, suitable for [General Users](general-users) and [Advanced Users](advanced-users) respectively.
 
+(general-users)=
+# 1. General Users
+
+This section is designed for general users. If this is your first time, please complete the [preparation step](aaps-ci-preparation) first.
+- If this is your first-time users (or you don't have a JKS), please follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
+- If you prefer to use your own JKS (Java KeyStore), and you know its password and alias, please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
+
+For the download links mentioned in the tutorial videos, please use the following site:  
+Support Website: [aaps-ci-preparation](https://github.com/Angus-repo/aaps-ci-preparation/releases/latest)
+
+(aaps-ci-preparation)=
+## Preparation Steps
+(aaps-ci-option1)=
+### AAPS-CI Option 1 – Generate JKS
+ - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/Z8aSEXFqBBc"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
+(aaps-ci-option2)=
+### AAPS-CI Option 2 – Upload Existing JKS
+ - Suitable for users who already have a JKS and know the JKS password and alias.
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/7RdCEGhG0zo"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
+## AAPS-CI GitHub Actions to Build the AAPS APK
+ - Suitable for general users.
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/7en4SF9bt-E"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
+## 如果你想要測試pull request中的項目
+ - Suitable for testers or those helping with testing.
+```{eval-rst}
+.. raw:: html
+
+    <!--crowdin: exclude-->
+    <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+      <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+        <iframe
+          src="https://www.youtube.com/embed/tmdcXvgaHfU"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+```
+
+![aaps_ci_pr_ci](../images/Building-the-App/aaps_ci_pr_ci.png)
+
+- PR number: Please enter the PR number that you want to test.
+
+- PR reference types: PR reference types include two options:
+  - head:
+    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
+    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+
+  - merge:
+    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
+    - This is a virtual merge commit automatically created by GitHub.
+    - This commit only exists when the PR has no conflicts and is mergeable.
+
+- variant:
+  - Select the variant you need:
+  - fullRelease: For regular pump usage with full functionality.
+  - [aapsclientRelease、aapsclient2Release](../RemoteFeatures/RemoteControl.md#aapsclient) For caregivers (requires [NightScout](../SettingUpAaps/Nightscout.md))。
+  - Text ending with “Debug” indicates that the APK will be built in debug mode, which is useful for troubleshooting.
+
+(advanced-users)=
+# 2. Advanced Users
+
+This section is intended for users who want to build the APK using Android Studio.
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 ## Computer and software specifications for building AAPS
