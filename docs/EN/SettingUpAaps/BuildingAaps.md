@@ -12,14 +12,17 @@ There are two ways to build the APK, suitable for [General Users](general-users)
 # 1. General Users
 
 This section is designed for general users. If this is your first time, please complete the [preparation step](aaps-ci-preparation) first.
-- If this is your first-time users (or you don't have a JKS), please follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
-- If you prefer to use your own JKS (Java KeyStore), and you know its password and alias, please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
 
 For the download links mentioned in the tutorial videos, please use the following site:  
 Support Website: [aaps-ci-preparation](https://github.com/Angus-repo/aaps-ci-preparation/releases/latest)
 
+If you have any questions during the process, please refer to [AAPS-CI Troubleshooting](aaps-ci-troubleshooting) first.
+
 (aaps-ci-preparation)=
 ## Preparation Steps
+- If this is your first-time users (or you don't have a JKS), please follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
+- If you prefer to use your own JKS (Java KeyStore), and you know its password and alias, please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
+
 (aaps-ci-option1)=
 ### AAPS-CI Option 1 – Generate JKS
  - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
@@ -38,6 +41,9 @@ Support Website: [aaps-ci-preparation](https://github.com/Angus-repo/aaps-ci-pre
       </div>
     </div>
 ```
+- As described in the video, please copy it to the corresponding field.
+
+![aaps_ci_pr_ci](../images/Building-the-App/aaps_ci_option1.png)
 
 (aaps-ci-option2)=
 ### AAPS-CI Option 2 – Upload Existing JKS
@@ -58,6 +64,22 @@ Support Website: [aaps-ci-preparation](https://github.com/Angus-repo/aaps-ci-pre
     </div>
 ```
 
+- As described in the video, please copy it to the corresponding field.
+
+![aaps_ci_option2](../images/Building-the-App/aaps_ci_option2.png)
+
+- For KEYSTORE_PASSWORD, KEY_ALIAS, and KEY_PASSWORD, please enter your actual password and alias in GitHub.
+
+![aaps_ci_option2_2](../images/Building-the-App/aaps_ci_option2_2.png)
+![aaps_ci_option2_3](../images/Building-the-App/aaps_ci_option2_3.png)
+![aaps_ci_option2_4](../images/Building-the-App/aaps_ci_option2_4.png)
+
+### AAPS-CI Google Drive Auth
+- Click Start Auth to begin the authorization process, and set the obtained token in GitHub after authorization.
+
+![aaps_ci_gdrive_auth](../images/Building-the-App/aaps_ci_gdrive_auth.png)
+
+(github-build-apk)=
 ## AAPS-CI GitHub Actions to Build the AAPS APK
  - Suitable for general users.
 ```{eval-rst}
@@ -75,8 +97,15 @@ Support Website: [aaps-ci-preparation](https://github.com/Angus-repo/aaps-ci-pre
       </div>
     </div>
 ```
+  - In GitHub, go to Actions, select AAPS-CI, and click Run workflow to start building the APK.
 
-## 如果你想要測試pull request中的項目
+  ![aaps_ci_github_build_apk](../images/Building-the-App/aaps_ci_github_build_apk.png)
+
+  - variant:
+    - 請參閱[variant](variant)
+
+(github-pr-test)=
+## If you want to test the items in a pull request
  - Suitable for testers or those helping with testing.
 ```{eval-rst}
 .. raw:: html
@@ -108,11 +137,26 @@ Support Website: [aaps-ci-preparation](https://github.com/Angus-repo/aaps-ci-pre
     - This is a virtual merge commit automatically created by GitHub.
     - This commit only exists when the PR has no conflicts and is mergeable.
 
-- variant:
-  - Select the variant you need:
-  - fullRelease: For regular pump usage with full functionality.
-  - [aapsclientRelease、aapsclient2Release](../RemoteFeatures/RemoteControl.md#aapsclient) For caregivers (requires [NightScout](../SettingUpAaps/Nightscout.md))。
-  - Text ending with “Debug” indicates that the APK will be built in debug mode, which is useful for troubleshooting.
+  - variant:
+    - 請參閱[variant](variant)
+
+  (variant)
+  ### variant
+    - Select the variant you need:
+      - fullRelease: For regular pump usage with full functionality.
+      - [aapsclientRelease、aapsclient2Release](../RemoteFeatures/RemoteControl.md#aapsclient) For caregivers (requires [NightScout](../SettingUpAaps/Nightscout.md))。
+      - Text ending with “Debug” indicates that the APK will be built in debug mode, which is useful for troubleshooting.
+
+  (aaps-ci-troubleshooting)=
+  ## AAPS-CI Troubleshooting
+
+    (aaps-ci-preparation)
+    ### aaps-ci-preparation網頁
+    (Writing in progress. Please wait…)
+
+    (github-actions-run-workflow)
+    ### Github Actions Run Workflow
+    (Writing in progress. Please wait…)
 
 (advanced-users)=
 # 2. Advanced Users
