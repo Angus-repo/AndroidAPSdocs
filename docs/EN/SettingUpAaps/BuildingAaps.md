@@ -148,20 +148,20 @@ If you have any questions during the process, please refer to [AAPS-CI Troublesh
       - pumpcontrol
       - Text ending with “Debug” indicates that the APK will be built in debug mode, which is useful for troubleshooting.
 
-  (aaps-ci-troubleshooting)=
-  ## AAPS-CI Troubleshooting
+(aaps-ci-troubleshooting)=
+## AAPS-CI Troubleshooting
 
-    (aaps-ci-preparation)=
-    ### aaps-ci-preparation web page
-      - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
-      - If you see the screen below, it means you have been inactive for a while, and the file manager has already shut down the local server.
-      - Please reopen aaps-ci-preparation.html using the file manager app and complete the remaining steps.
+  (aaps-ci-preparation)=
+  ### aaps-ci-preparation web page
+  - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
+  - If you see the screen below, it means you have been inactive for a while, and the file manager has already shut down the local server.
+  - Please reopen aaps-ci-preparation.html using the file manager app and complete the remaining steps.
 
-    ![aaps_ci_html_not_found](../images/Building-the-App/aaps_ci_html_not_found.png)
+  ![aaps_ci_html_not_found](../images/Building-the-App/aaps_ci_html_not_found.png)
 
-    (github-actions-run-workflow)=
-    ### Github Actions Run Workflow(Build apk)
-    (Writing in progress. Please wait…)
+  (github-actions-run-workflow)=
+  ### Github Actions Run Workflow(Build apk)
+  (Writing in progress. Please wait…)
 
 (advanced-users)=
 # 2. Advanced Users
