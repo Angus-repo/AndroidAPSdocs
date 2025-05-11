@@ -138,9 +138,9 @@ If you have any questions during the process, please refer to [AAPS-CI Troublesh
     - This commit only exists when the PR has no conflicts and is mergeable.
 
   - variant:
-    - 請參閱[variant](variant)
+    - Please refer to [variant](variant)
 
-  (variant)
+  (variant)=
   ### variant
     - Select the variant you need:
       - fullRelease: For regular pump usage with full functionality.
