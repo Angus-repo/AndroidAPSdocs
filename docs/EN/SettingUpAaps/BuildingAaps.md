@@ -20,8 +20,8 @@ If you have any questions during the process, please refer to [AAPS-CI Troublesh
 
 (aaps-ci-preparation)=
 ## Preparation Steps
-- If this is your first-time users (or you don't have a JKS), please follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
-- If you prefer to use your own JKS (Java KeyStore), and you know its password and alias, please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
+- Option1: If this is your first-time users (or you don't have a JKS), please follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
+- Option2: If you prefer to use your own JKS (Java KeyStore), and you know its password and alias, please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
 - Once you complete either of the two steps above, you can start [building the APK](github-build-apk).
 
 (aaps-ci-option1)=
