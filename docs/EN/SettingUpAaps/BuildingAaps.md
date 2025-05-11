@@ -150,12 +150,12 @@ If you have any questions during the process, please refer to [AAPS-CI Troublesh
   (aaps-ci-troubleshooting)=
   ## AAPS-CI Troubleshooting
 
-    (aaps-ci-preparation)
-    ### aaps-ci-preparation網頁
+    (aaps-ci-preparation)=
+    ### aaps-ci-preparation web page
     (Writing in progress. Please wait…)
 
-    (github-actions-run-workflow)
-    ### Github Actions Run Workflow
+    (github-actions-run-workflow)=
+    ### Github Actions Run Workflow(Build apk)
     (Writing in progress. Please wait…)
 
 (advanced-users)=
