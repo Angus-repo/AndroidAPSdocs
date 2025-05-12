@@ -22,7 +22,7 @@ If you have any questions during the process, please refer to [AAPS-CI Troublesh
 ## Preparation Steps
 - Option1: If this is your first-time users (or you don't have a JKS), please follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
 - Option2: If you prefer to use your own JKS (Java KeyStore), and you know its password and alias, please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
-- Once you complete either of the two steps above, you can start [building the APK](github-build-apk).
+- Once you complete either of the two steps above, you can google drive [start auth](aaps-ci-google-drive-auth).
 
 (aaps-ci-option1)=
 ### AAPS-CI Option 1 – Generate JKS
@@ -72,9 +72,12 @@ If you have any questions during the process, please refer to [AAPS-CI Troublesh
 - For KEYSTORE_PASSWORD, KEY_ALIAS, and KEY_PASSWORD, please enter your actual password and alias in GitHub.
 
 ![aaps_ci_option2_2](../images/Building-the-App/aaps_ci_option2_2.png)
+
 ![aaps_ci_option2_3](../images/Building-the-App/aaps_ci_option2_3.png)
+
 ![aaps_ci_option2_4](../images/Building-the-App/aaps_ci_option2_4.png)
 
+(aaps-ci-google-drive-auth)=
 ### AAPS-CI Google Drive Auth
 - Click Start Auth to begin the authorization process, and set the obtained token in GitHub after authorization.
 
@@ -145,7 +148,7 @@ If you have any questions during the process, please refer to [AAPS-CI Troublesh
   ### variant
     - Select the variant you need:
       - fullRelease: For regular pump usage with full functionality.
-      - [aapsclientRelease、aapsclient2Release](../RemoteFeatures/RemoteControl.md#aapsclient) For caregivers (requires [NightScout](../SettingUpAaps/Nightscout.md))。
+      - [aapsclient、aapsclient2](../RemoteFeatures/RemoteControl.md#aapsclient) For caregivers (requires [NightScout](../SettingUpAaps/Nightscout.md))。
       - pumpcontrol
       - Text ending with “Debug” indicates that the APK will be built in debug mode, which is useful for troubleshooting.
 
