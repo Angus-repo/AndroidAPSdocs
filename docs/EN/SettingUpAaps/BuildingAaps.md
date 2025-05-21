@@ -93,7 +93,7 @@ If you have any questions during the process, please refer to [AAPS-CI Troublesh
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.youtube.com/embed/7en4SF9bt-E"
+          src="https://www.youtube.com/embed/2SEiCxoh4e4"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
