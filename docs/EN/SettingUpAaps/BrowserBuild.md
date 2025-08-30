@@ -84,7 +84,7 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 
 1. If you open this page in a web view or some browsers, the HTML file might not download. Please copy this URL and paste it into your browser to download:
 
-  ```text
+  ```code
   https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
   ```
    
@@ -95,11 +95,11 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 2. Backup download:
   <!--crowdin:disable-->
 
-```{eval-rst}
-.. raw:: html
+  ```{eval-rst}
+  .. raw:: html
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download style="font-weight: bold; font-size: 20px;">  aaps-ci-preparation.html</a>
-```
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download style="font-weight: bold; font-size: 20px;">  aaps-ci-preparation.html</a>
+  ```
 <!--crowdin:enable-->
 ```
 
