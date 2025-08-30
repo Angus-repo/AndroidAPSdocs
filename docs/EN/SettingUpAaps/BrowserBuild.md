@@ -84,24 +84,26 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 
 1. If you open this page in a web view or some browsers, the HTML file might not download. Please copy this URL and paste it into your browser to download:
 
-  ```code
-  https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
-  ```
+```text
+https://github.com/Angus-repo/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+```
    
-   Or visit the latest release page:
-   ```text
-   https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
-   ```
-2. Backup download:
+  Or visit the latest release page:
+
+```text
+https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
+```
+```
+
+Backup copy hosted on this site:
   <!--crowdin:disable-->
 
-  ```{eval-rst}
-  .. raw:: html
+```{eval-rst}
+.. raw:: html
 
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download style="font-weight: bold; font-size: 20px;">  aaps-ci-preparation.html</a>
-  ```
-<!--crowdin:enable-->
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download style="font-weight: bold; font-size: 20px;">  aaps-ci-preparation.html</a>
 ```
+<!--crowdin:enable-->
 
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
 
