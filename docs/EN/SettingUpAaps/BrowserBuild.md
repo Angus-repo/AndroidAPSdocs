@@ -97,7 +97,7 @@ https://github.com/Angus-repo/aaps-ci-preparation/releases/latest
 ```{eval-rst}
 .. raw:: html
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download style="font-weight: bold; font-size: 20px;">  aaps-ci-preparation.html</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../_static/CI/aaps-ci-preparation.html" download>  aaps-ci-preparation.html</a>
 ```
 <!--crowdin:enable-->
 ````
